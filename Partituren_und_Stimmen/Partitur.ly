@@ -100,6 +100,24 @@ print-all-headers = ##f
     \removeWithTag #'klavierauszug
     \removeWithTag #'direction
     \removeWithTag #'einzelstimme
+    \scoreSanctusGounodDVE
+
+    \layout {
+      \context {
+        \Staff
+        \override RestCollision.positioning-done = #merge-rests-on-positioning
+      }
+    }
+  }
+  
+  \score {
+    \header {
+      piece = \markup { \larger \larger \larger { Benedictus } }
+    }
+    \removeWithTag #'transponierendepartitur
+    \removeWithTag #'klavierauszug
+    \removeWithTag #'direction
+    \removeWithTag #'einzelstimme
     \scoreBenedictusGounodDVE
 
     \layout {

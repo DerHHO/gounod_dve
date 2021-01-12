@@ -80,7 +80,7 @@ orgelsystemOSalutarisGounodDVE = {
           shortInstrumentName = ""
           midiInstrument = "acoustic grand"
 
-          \override VerticalAxisGroup.staff-staff-spacing = #'((basic-distance . 9) (minimum-distance . 7) (padding . 1) (stretchability . 5))
+          %\override VerticalAxisGroup.staff-staff-spacing = #'((basic-distance . 9) (minimum-distance . 7) (padding . 1) (stretchability . 5))
         }
         <<
           \new Voice = "valt" {
@@ -100,7 +100,7 @@ orgelsystemOSalutarisGounodDVE = {
     >>
 
 
-    \new Staff \with {
+    %{\new Staff \with {
       instrumentName = ""
       shortInstrumentName = ""
       midiInstrument = "acoustic grand"
@@ -118,7 +118,7 @@ orgelsystemOSalutarisGounodDVE = {
         }
       }
 
-    >>
+    >>%}
   >>
 
 }

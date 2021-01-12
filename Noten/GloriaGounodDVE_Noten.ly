@@ -28,6 +28,16 @@ globalGloriaGounodDVE = {
   \tempo "Allegro"
 }
 
+globalDomineGloriaGounodDVE = {
+  \key f\major
+  \tempo "Andante"
+}
+
+globalQuoniamGloriaGounodDVE = {
+  \key c \major | % 146
+  \tempo "Allegro"
+}
+
 vorspielpausenGloriaGounodDVE = {
 
 }
@@ -150,7 +160,7 @@ sopranNotenGloriaGounodDVE = \tempTranspose \relative c'' {
   c4 r4 r2 \bar "||"
   \mBreak | % 105
 
-  \tempo "Andante"
+  \globalDomineGloriaGounodDVE
   c4.. ^\p bes16 a4 r4 | % 106
   d2 c4 r4 | % 107
   c4 ( a4 ) g4 ( bes4 ) | % 108
@@ -192,8 +202,7 @@ sopranNotenGloriaGounodDVE = \tempTranspose \relative c'' {
   c2 ( b4 a4 ) | % 145
   b2. r4 \bar "||"
   \mBreak | % 146
-  \key c \major | % 146
-  \tempo "Allegro"
+  \globalQuoniamGloriaGounodDVE
   c4.. ^\f c16 c2 | % 147
   c4 ( b4 ) a4 g4 | % 148
   c2( d2) | % 149
@@ -275,6 +284,7 @@ altNotenGloriaGounodDVE = \tempTranspose \relative c' {
   e1 ~ ^\fermata | % 104
   e4 r4 r2 \bar "||"
   \mBreak | % 105
+  \globalDomineGloriaGounodDVE
   a4.. ^\p g16 f4 r4 | % 106
   bes2 a4 r4 | % 107
   a4 ( f4 ) e4 ( g4 ) | % 108
@@ -317,7 +327,7 @@ altNotenGloriaGounodDVE = \tempTranspose \relative c' {
   a2 ( g4 fis4 ) | % 145
   g2. r4 \bar "||"
   \mBreak | % 146
-  \key c \major | % 146
+  \globalQuoniamGloriaGounodDVE
   c4.. ^\f c16 c2 | % 147
   c4 ( b4 ) a4 g4 | % 148
   a2( b2) | % 149
@@ -397,7 +407,7 @@ orgelRHOGloriaGounodDVE = \relative g' {
   <c e g c>1 ~ ^\fermata ~ ~ ~ | % 104
   <c e g c>4 r4 r2 \bar "||"
   \mBreak | % 105
-  \key f \major | % 105
+  \globalDomineGloriaGounodDVE
   <a' c>4.. _\p <g bes>16 <f a>2 | % 106
   <bes d>2 <a c>4 r4 | % 107
   c4 a4 g4 bes4 | % 108
@@ -454,7 +464,7 @@ orgelRHOGloriaGounodDVE = \relative g' {
   <a c>2 <g b>4 <fis a>4 | % 145
   <g b>2. r4 \bar "||"
   \mBreak | % 146
-  \key c \major | % 146
+  \globalQuoniamGloriaGounodDVE
   <e g c>2 _\f <e g c>2 | % 147
   <g c>4 <g b>4 <e a>4 <e g>4 | % 148
   <e a c>2 <f b d>2 | % 149
@@ -659,7 +669,7 @@ orgelLHOGloriaGounodDVE = \relative c {
   <c c'>1 ~ ^\fermata |
   <c c'>4 r4 r2 \bar "||"
   \mBreak | % 105
-  \key f \major
+  \globalDomineGloriaGounodDVE
   f'4 a4 c4 cis4 d4 e4 f8 [ c8 a8 f8 ]
   \voiceOne
   a4 c4 bes4 g4
@@ -702,46 +712,66 @@ orgelLHOGloriaGounodDVE = \relative c {
   <g bes>1 <f c'>1
   \mBreak
   \voiceOne
-  <bes, f' bes>2. r4 c'2 d4 c4 c2. d,4 \rest d'1 es2 d4 c4 d2.
-  d,4 \rest \bar "||"
+  <bes, f' bes>2. r4 |
+  c'2 d4 c4 |
+  c2. r4 |
+  d1 | 
+  es2 d4 c4 | 
+  d2. r4  \bar "||"
   \mBreak | % 146
-  \key c \major
+  \globalQuoniamGloriaGounodDVE
   \oneVoice
-  <c g' c>2 <c g' c>2 |
-  <c' e>4 <g d'>4 <a c>4 <e b'>4 |
-  <a c>2 <g d'>2 ~ |
-  <c, g' c>4 c4 e4 g4 |
-  <c e>4 <g d'>4 <a c>4 b4 |
-  a2. a4 |
-  \mPageBreak
-  <d, d'>2. <d d'>4 |
-  <b b'>2. <b b'>4 |
-  <e b'>2 <c c'>2 |
-  <<
-    {
-      \voiceOne
-      d'2 c2 |
+  \relative c {
+    <c g' c>2 <c g' c>2 |
+    <c' e>4 <g d'>4 <a c>4 <e b'>4 |
+    <a c>2 <g d'>2 ~ |
+    <c, g' c>4 c4 e4 g4 |
+    <c e>4 <g d'>4 <a c>4 b4 |
+    a2. a4 |
+    \mPageBreak
+    <d, d'>2. <d d'>4 |
+    <b b'>2. <b b'>4 |
+    <e b'>2 <c c'>2 |
+    <<
+      {
+        \voiceOne
+        d'2 c2 |
 
-    }
-    \new Voice \relative d {
-      \voiceTwo
-      d1 |
-    }
-  >>
-  \oneVoice
-  <g b>2. r4 R1 \mBreak <c, g' c>2. r4 R1 <c g' c>2. <e g>4 <f a>4 <g
-  b>4 <a c>4 <b d>4 <c e>2 f,2 g2 ~ <g, g'>2 \mBreak <c g' c>2. r4
-  R1 <c g' c>2. r4 R1 <c g' c>2. <e g>4 \mPageBreak <f a>4 <g b>4 <a c>4
-  <b d>4 <c e>2 f,2 g2 ~ <g, g'>2 <c g' c>2. r4 <a a'>1 ~ <d a'>2. r4
-  <g, g'>1 <c, c'>1 \bar "|."
+      }
+      \new Voice \relative d {
+        \voiceTwo
+        d1 |
+      }
+    >>
+    \oneVoice
+    <g b>2. r4 R1 \mBreak <c, g' c>2. r4 R1 <c g' c>2. <e g>4 <f a>4 <g
+    b>4 <a c>4 <b d>4 <c e>2 f,2 g2 ~ <g, g'>2 \mBreak <c g' c>2. r4
+    R1 <c g' c>2. r4 R1 <c g' c>2. <e g>4 \mPageBreak <f a>4 <g b>4 <a c>4
+    <b d>4 <c e>2 f,2 g2 ~ <g, g'>2 <c g' c>2. r4 <a a'>1 ~ <d a'>2. r4
+    <g, g'>1 <c, c'>1 \bar "|."
+  }
   \mBreak | % 177
 }
 
 orgelLHUGloriaDVE = \relative c {
-  \time 4/4  s1*7 \mBreak s2*5 f2 e1 s2 f2 e1 s1 \mPageBreak s1*7 \mBreak
-  s1 e4 d2 e4 d1 s1*4 \mBreak s1*6 \mPageBreak s1*8 \bar "||"
+  \time 4/4  s1*7
+  \mBreak s2*5
+  f2
+  e1 |
+  s2 f2 |
+  e1 |
+  s1 | \mPageBreak
+  s1*7 \mBreak
+  s1 |
+  e4 d2 e4 |
+  d1 |
+  s1*4 | \mBreak
+  s1*6 | \mPageBreak
+  s1*8 \bar "||"
   \mBreak | % 105
-  \key f \major s1*2
+
+  \globalDomineGloriaGounodDVE
+  s1*2
   \voiceTwo
 
   c1~ |
@@ -768,12 +798,11 @@ orgelLHUGloriaDVE = \relative c {
   a4 a a a |
   g4 f8 g a4 r |
   R1 \mBreak
-  R1 |
-  R1 |
+  s1*2 |
   g4 fis g r |
   c4 c, d e |
   f e f a |
-  R1 |
+  s1 |
   \mPageBreak
   s1*2 |
 
@@ -788,9 +817,13 @@ orgelLHUGloriaDVE = \relative c {
   g2. r4 |
   \bar "||"
   \mBreak | % 146
-  \key c \major s1*6 \mPageBreak s1*6 \mBreak s1*6 \mBreak s1*5
-  \mPageBreak s1*8 \bar "|."
-  \mBreak | % 177
+  \globalQuoniamGloriaGounodDVE
+  s1*6 | \mPageBreak
+  s1*6 | \mBreak
+  s1*6 | \mBreak
+  s1*5 |
+  \mPageBreak
+  s1*8 \bar "|."
 }
 
 orgelLHNotenGloriaGounodDVE = \tempTranspose \relative c {

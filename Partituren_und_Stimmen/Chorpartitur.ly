@@ -8,7 +8,6 @@
 
 \include "../Noten/KyrieGounodDVE_Noten.ly"
 \include "../Noten/GloriaGounodDVE_Noten.ly"
-\include "../Noten/CredoGounodDVE_Noten.ly"
 \include "../Noten/SanctusGounodDVE_Noten.ly"
 \include "../Noten/BenedictusGounodDVE_Noten.ly"
 \include "../Noten/OSalutarisGounodDVE_Noten.ly"
@@ -84,21 +83,6 @@ tempTranspose = #(define-music-function (parser location music)
   \optionalTranspose { 
     \compressFullBarRests
     \transpose c c \chorpartiturGloriaGounodDVE 
-  }
-}
-
-\score {
-  \header {
-    piece = \markup { %{<piecetitlesize>%}\larger \larger \larger %{</piecetitlesize>%} { Credo } }
-  }
-  \removeWithTag #'transponierendepartitur
-  \removeWithTag #'partitur
-  \removeWithTag #'einzelstimme
-  \removeWithTag #'klavierauszug
-  \removeWithTag #'midiausgabe
-  \optionalTranspose { 
-    \compressFullBarRests
-    \transpose c c \chorpartiturCredoGounodDVE 
   }
 }
 

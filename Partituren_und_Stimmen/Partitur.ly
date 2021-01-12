@@ -5,7 +5,6 @@
 
 \include "../Noten/KyrieGounodDVE_Noten.ly"
 \include "../Noten/GloriaGounodDVE_Noten.ly"
-\include "../Noten/CredoGounodDVE_Noten.ly"
 \include "../Noten/SanctusGounodDVE_Noten.ly"
 \include "../Noten/BenedictusGounodDVE_Noten.ly"
 \include "../Noten/OSalutarisGounodDVE_Noten.ly"
@@ -92,40 +91,7 @@ print-all-headers = ##f
       }
     }
   }
-  %{\score {
-    \header {
-      piece = \markup { \larger \larger \larger { Credo } }
-    }
-    \removeWithTag #'transponierendepartitur
-    \removeWithTag #'klavierauszug
-    \removeWithTag #'direction
-    \removeWithTag #'einzelstimme
-    \scoreCredoGounodDVE
-
-    \layout {
-      \context {
-        \Staff
-        \override RestCollision.positioning-done = #merge-rests-on-positioning
-      }
-    }
-  }
-  \score {
-    \header {
-      piece = \markup { \larger \larger \larger { Sanctus } }
-    }
-    \removeWithTag #'transponierendepartitur
-    \removeWithTag #'klavierauszug
-    \removeWithTag #'direction
-    \removeWithTag #'einzelstimme
-    \scoreSanctusGounodDVE
-
-    \layout {
-      \context {
-        \Staff
-        \override RestCollision.positioning-done = #merge-rests-on-positioning
-      }
-    }
-  }%}
+  
   \score {
     \header {
       piece = \markup { \larger \larger \larger { Benedictus } }

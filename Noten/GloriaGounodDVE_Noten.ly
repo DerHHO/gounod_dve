@@ -8,6 +8,7 @@
 \include "../Noten/generaldefinitions.ly"
 \include "../Noten/mydrums2.ly"
 \include "../Noten/drumdefinitions.ly"
+\include "../Noten/mBreak.ly"
 
 tempTranspose = #(define-music-function (parser location music)
                    (ly:music?)
@@ -17,9 +18,6 @@ tempTranspose = #(define-music-function (parser location music)
                           (to (ly:make-pitch octave note alteration)))
                      #{ \transpose c c  $music #}))
 
-
-mBreak = { }
-mPageBreak = { }
 
 globalGloriaGounodDVE = {
   \taktstil
@@ -34,62 +32,74 @@ vorspielpausenGloriaGounodDVE = {
 
 }
 
+gemeinsamerTextIGloriaGounodDVE = \lyricmode {
+  Glo -- ri -- a in ex -- cel -- sis De -- o,
+  glo -- ri -- a in ex -- cel -- sis De -- o.
+  Et in ter -- ra pax ho -- mi -- ni -- bus
+  bo -- nae vo -- lun -- ta -- tis.
+  Lau -- da -- mus te,
+  be -- ne -- di -- ci -- mus te,
+  ad -- o -- ra -- mus te,
+  glo -- ri -- fi -- ca -- mus te.
+  Gra -- ti -- as, gra -- ti -- as
+  a -- gi -- mus ti -- bi pro -- pter
+  mag -- nam glo -- ri -- am tu -- am.
+  Do -- mi -- ne De -- us,
+  Rex cœ -- les -- tis,
+  De -- us Pa -- ter om -- ni -- po -- tens.
+}
+
+gemeinsamerTextIIGloriaGounodDVE = \lyricmode {
+  Quo -- ni -- am Tu so -- lus San -- ctus,
+  tu so -- lus Do -- mi -- nus, tu so -- lus
+  Al -- tis -- si -- mus, Je -- su Chri -- ste,
+  cum San -- cto Spi -- ri -- tu in glo -- ri -- a De -- i,
+  in glo -- ri -- a De -- i Pa -- tris,
+  tu so -- lus Al -- tis -- si -- mus,
+  cum Sanc -- to Spi -- ri -- tu in glo -- ri -- a De -- i
+  Pa -- tris.
+  A -- men, a -- men.
+}
+
 sopranTextGloriaGounodDVE = \lyricmode {
-  Glo -- ri -- a in ex -- cel
-  -- sis De -- "o," glo -- ri -- a in ex -- cel -- sis De
-  -- "o." Et in ter -- ra pax ho -- mi -- ni -- bus
-  bo -- nae vo -- lun -- ta -- "tis." Lau -- da --
-  mus "Te," be -- ne -- di -- ci -- mus "Te," ad -- o -- ra --
-  mus "Te," glo -- ri -- fi -- ca -- mus "Te." Gra -- ti -- "as," gra
-  -- ti -- as a -- gi -- mus Ti -- bi prop -- ter mag -- nam glo -- ri
-  -- am Tu -- "am." Do -- mi -- ne De -- "us," Rex coe -- les --
-  "tis," De -- us Pa -- ter om -- ni -- po -- "tens."  Do -- mi
-  -- ne Fi -- li u -- ni -- ge -- ni -- "te," Je --
-  su Chri -- "ste," Je -- su Chri -- "ste," Do -- mi
-  -- "ne,"  Do -- mi -- ne De -- "us," Ag --
-  nus De -- "i," Fi -- li -- us Pat -- "ris." Qui tol --
-  lis pec -- ca -- "ta," pec -- ca -- ta mun -- "di:" mi -- se
-  -- re -- re no -- "bis." Qui tol -- lis pec -- ca -- "ta," pec -- ca
-  -- ta mun -- "di:" sus -- ci -- pe de -- pre -- ca -- ti
-  -- o -- nem nost -- "ram." Qui se -- "des," qui se -- des ad dex --
-  te -- ram Pat -- "ris:" mi -- se -- re -- re no -- "bis," mi -- se
-  -- re -- re no --  "bis." Quo -- ni -- am Tu so --
-  lus Sanc -- "tus," Tu so -- lus Do -- mi -- "nus," Tu so
-  -- lus Al -- tis -- si -- "mus," Je -- su Chri -- "ste," cum
-  Sanc -- to Spi -- ri -- tu in glo -- ri -- a De --
-  "i," in glo -- ri -- a De -- i Pat -- "ris," Tu so
-  -- lus Al -- tis -- si -- "mus," cum Sanc -- to
-  Spi -- ri -- tu in glo -- ri -- a De -- i Pat -- "ris."
-  A -- "men," a -- "men."
+  \gemeinsamerTextIGloriaGounodDVE
+  Do -- mi -- ne Fi -- li u -- ni -- ge -- ni -- te,
+  Je -- su Chri -- ste, Je -- su Chri -- ste,
+  Do -- mi -- ne,  Do -- mi -- ne De -- us,
+  A -- gnus De -- i, Fi -- li -- us Pa -- tris.
+  Qui tol -- lis pec -- ca -- ta,
+  pec -- ca -- ta mun -- di:
+  mi -- se -- re -- re no -- bis.
+  Qui tol -- lis pec -- ca -- ta,
+  pec -- ca -- ta mun -- di:
+  su -- sci -- pe de -- pre -- ca -- ti -- o -- nem no -- stram.
+  Qui se -- des, qui se -- des ad dex -- te -- ram Pa -- tris:
+  mi -- se -- re -- re no -- bis,
+  mi -- se -- re -- re no -- bis.
+  \gemeinsamerTextIIGloriaGounodDVE
 }
 
 altTextGloriaGounodDVE = \lyricmode {
-  Glo -- ri -- a in ex -- cel -- sis De -- "o," glo -- ri -- a in ex -- cel -- sis De
-  -- "o." Et in ter -- ra pax ho -- mi -- ni -- bus bo -- nae vo
-  -- lun -- ta -- "tis." Lau -- da -- mus "Te," be
-  -- ne -- di -- ci -- mus "Te," ad -- o -- ra -- mus "Te," glo
-  -- ri -- fi -- ca -- mus "Te." Gra -- ti -- "as," gra -- ti -- as a
-  -- gi -- mus Ti -- bi prop -- ter mag -- nam glo -- ri -- am Tu
-  -- "am." Do -- mi -- ne De -- "us," Rex coe -- les -- "tis,"
-  De -- us Pa -- ter om -- ni -- po -- "tens."  Do -- mi -- ne
-  Fi -- li u -- ni -- ge -- ni -- "te," Je --
-  su Chri -- "ste," Je -- su Chri -- "ste," Do -- mi
-  -- ne De -- "us," Do -- mi -- ne De -- "us,"
-  Ag -- nus De -- "i," Fi -- li -- us Pat -- "ris." Qui
-  tol -- lis pec -- ca -- "ta," pec -- ca -- ta mun -- "di:" mi
-  -- se -- re -- re no -- "bis," mi -- se -- re -- re no -- "bis." Qui
-  tol -- lis pec -- ca -- "ta," pec -- ca -- ta mun --
-  "di:" sus -- ci -- pe de -- pre -- ca -- ti -- o -- nem nost --
-  "ram." Qui se -- "des," qui se -- des ad dex -- te -- ram Pat --
-  "ris:" mi -- se -- re -- re no -- "bis," mi -- se -- re -- re no
-  --  "bis." Quo -- ni -- am Tu so -- lus Sanc
-  -- "tus," Tu so -- lus Do -- mi -- "nus," Tu so -- lus
-  Al -- tis -- si -- "mus," Je -- su Chri -- "ste," cum Sanc
-  -- to Spi -- ri -- tu in glo -- ri -- a De -- "i,"
-  in glo -- ri -- a De -- i Pat -- "ris," Tu so --
-  lus Al -- tis -- si -- "mus," cum Sanc -- to Spi -- ri
-  -- tu in glo -- ri -- a De -- i Pat -- "ris." A --
-  "men," a -- "men."
+  \gemeinsamerTextIGloriaGounodDVE
+  Do -- mi -- ne Fi -- li u -- ni -- ge -- ni -- te,
+  Je -- su Chri -- ste,
+  Je -- su Chri -- ste,
+  Do -- mi -- ne De -- us,
+  Do -- mi -- ne De -- us,
+  A -- gnus De -- i, Fi -- li -- us Pa -- tris.
+  Qui tol -- lis pec -- ca -- ta,
+  pec -- ca -- ta mun -- di:
+  mi -- se -- re -- re no -- bis,
+  mi -- se -- re -- re no -- bis.
+  Qui tol -- lis pec -- ca -- ta,
+  pec -- ca -- ta mun -- di:
+  su -- sci -- pe de -- pre -- ca -- ti -- o -- nem
+  no -- stram. Qui se -- des,
+  qui se -- des ad dex -- te -- ram Pa -- tris:
+  mi -- se -- re -- re no -- bis,
+  mi -- se -- re -- re no -- bis.
+  \gemeinsamerTextIIGloriaGounodDVE
+
 }
 
 sopranNotenGloriaGounodDVE = \tempTranspose \relative c'' {
@@ -399,6 +409,8 @@ orgelRHOGloriaGounodDVE = \relative g' {
   bes'2 a8 [ g8 f8 e8 ] | % 114
   c'2 bes8 [ a8 g8 f8 ] | % 115
   d'2 <a c>8 [ <g bes>8 <f a>8 <e g>8 ] \mPageBreak | % 116
+
+  %Deus
   <g bes>2 <f a>4 r4 | % 117
   <fis a>4 <fis a>4 <fis a>4 <fis a>4 | % 118
   <g bes>4 <bes d>4 <a c>4 <g bes>4 | % 119
@@ -417,9 +429,21 @@ orgelRHOGloriaGounodDVE = \relative g' {
   <c e>4 <bes d>4 <a c>4 <g bes>4 | % 132
   <g bes>2 <f a>4 r4 | % 133
   <f a>2 <e a>2 \mPageBreak | % 134
-  <gis b>4 <b d>4 <a c>4 <gis b>4 | % 135
-  <a c>2 <d, gis b>2 | % 136
-  <c e a>2. r4 | % 137
+  <<
+    {
+      \voiceOne
+      <gis b>4 <b d>4 <a c>4 <gis b>4 | % 135
+      <a c>2 <d, gis b>2 | % 136
+      <c a'>2. r4 | % 137
+    }
+    \new Voice \relative e' {
+      \voiceTwo
+      e2. f4 |
+      e1~ |
+      e2. r4 |
+    }
+  >>
+  \oneVoice
   <d fis d'>1 | % 138
   <d g bes>1 | % 139
   <f a c>1 \mBreak | \barNumberCheck #140
@@ -589,12 +613,12 @@ orgelRHNotenGloriaGounodDVE = \tempTranspose \relative c' {
 orgelLHOGloriaGounodDVE = \relative c {
   <c g' c>2. r4 |
   <c' e>2 <c e>2 |
-  \oneVoice 
+  \oneVoice
   <c e>4 <g d'>4 <a c>4 <e b'>4 |
   <a c>2 <g d'>2 |
   <c, g' c>4 c4 e4 g4 |
   <c e>2 <c e>2 |
-  <c e>4 <g d'>4 <a c>4 b4 | \mBreak 
+  <c e>4 <g d'>4 <a c>4 b4 | \mBreak
   <a c>2 ~ <d, a' c>2 |
   <g b>4 g4 ^\> g4 g4 -\! |
   b2 \voiceOne c4 d4 |
@@ -602,14 +626,14 @@ orgelLHOGloriaGounodDVE = \relative c {
   \oneVoice b2 \voiceOne c4 d4 |
   c1 |
   \oneVoice
-  c2 <c, g'>2 | \mPageBreak 
+  c2 <c, g'>2 | \mPageBreak
   f2 g4 a4 |
   g2 ~ <g, g'>2 |
   <c g'>2. g'4 |
   <c e>2 <g d'>2 |
   <c, g' c>4 g'4 e4 c4 |
   g'2. g4 |
-  c4 c,4 e4 g4 | \mBreak 
+  c4 c,4 e4 g4 | \mBreak
   c2 <e, b'>2
   \voiceOne
   a4 c4 b4 a4 |
@@ -618,14 +642,14 @@ orgelLHOGloriaGounodDVE = \relative c {
   b4 b4 c4 d4 |
   c2 e,2 |
   f4 a4 c4 g4 |
-  c,2 d4 e4 | \mBreak 
+  c,2 d4 e4 | \mBreak
   f8 [ g8 a8 b8 ] c2 |
   c1 ~ |
   c2. f,4 |
   g2 ~ <g, g'>2 |
   <c c'>4 <c c'>4 <c c'>4 <c c'>4 |
   <c c'>1 ~ |
-  \mPageBreak 
+  \mPageBreak
   <c c'>4 <c c'>4 <c c'>4 <c c'>4 |
   <c c'>1 ~ |
   <c c'>4 <c c'>4 <c c'>4 <c c'>4 |
@@ -635,37 +659,76 @@ orgelLHOGloriaGounodDVE = \relative c {
   <c c'>1 ~ ^\fermata |
   <c c'>4 r4 r2 \bar "||"
   \mBreak | % 105
-  \key f \major f'4 a4 c4 cis4 d4 e4 f8 [ c8 a8 f8 ]
+  \key f \major
+  f'4 a4 c4 cis4 d4 e4 f8 [ c8 a8 f8 ]
   \voiceOne
   a4 c4 bes4 g4
-  \oneVoice
+
   c2. r4 |
-  c1 |
+  s1 |
+  \voiceOne
   d4 e4 f4 r4 |
   \mBreak
   bes,2 c4 d4 |
-  c4 b4 c4 c,4 ~ |
-  bes'1 |
-  \voiceOne
-  a2 c4 a4 bes4 g4 c2 ~ \mPageBreak c2. g'4 \rest d4 d4 d4 d4 d4 e4 f4
-  d4 c2 <c, bes'>2 <f a>2. r4 d4 f4 a4 <d, d'>4 ~ \mBreak d'2. e8 [ d8
-  ] <a cis>1 ~ ~ <d, a' cis>2 ~ ~ <d a' d>4 r4
+  s1 |
+  \voiceOne bes1 |
+  a2 c4 a4 bes4 g4 c2 ~
+  \mPageBreak
+  c2. g'4 \rest
+  s1 |
+  d4 e4 f4 d4 |
   \oneVoice
-  <a' cis>4 <a cis>4 <a
-  cis>4 <a cis>4 d2 cis4 d,4 \rest
-  a'4 a4 a4 a4 \mBreak
-  g4 f8 [ g8
-  ] a4 r4 d,4 f4 a4 <d, d'>4 d'2. d,4 \rest c'1 ~ c2. f4 \rest d2 c2
+  c2 <c, bes'>2 |
+  <f a>2. r4 |
+  d4 f4 a4 <d, d'>4 ~ |
+  \mBreak
+  \voiceOne d'2. e8 [ d8 ] cis1 ~ |
+  cis2 d4 r4
+  %\oneVoice
+  cis4 4 4 4 |
+  d2 cis4 r4 |
+  \oneVoice a4 a4 a4 a4 | \mBreak
+  g4 f8 [ g8 ] a4 r4 d,4 f4 a4 <d, d'>4
   \voiceOne
-  \mPageBreak b4 gis4 a4 d,4 e1
+  d'2. r4 c1 ~ c2. r4 |
+  \oneVoice d2 c2
+  \voiceOne
+  \mPageBreak
   \oneVoice
-  <a, a'>2. a'4 <d, a'>1 <g bes>1 <f c'>1
-  \mBreak <bes, f' bes>2. r4 c'2 d4 c4 c2. d,4 \rest d'1 es2 d4 c4 d2.
+  b4 gis4 a4 d,4 |
+  e1 |
+  <a, a'>2. a'4 |
+  <d, a'>1 |
+  <g bes>1 <f c'>1
+  \mBreak
+  \voiceOne
+  <bes, f' bes>2. r4 c'2 d4 c4 c2. d,4 \rest d'1 es2 d4 c4 d2.
   d,4 \rest \bar "||"
   \mBreak | % 146
-  \key c \major <c g' c>2 <c g' c>2 <c' e>4 <g d'>4 <a c>4 <e b'>4 <a
-  c>2 <g d'>2 ~ <c, g' c>4 c4 e4 g4 <c e>4 <g d'>4 <a c>4 b4 a2. a4
-  \mPageBreak <d, d'>2. <d d'>4 <b b'>2. <b b'>4 <e b'>2 <c c'>2 d'2 c2
+  \key c \major
+  \oneVoice
+  <c g' c>2 <c g' c>2 |
+  <c' e>4 <g d'>4 <a c>4 <e b'>4 |
+  <a c>2 <g d'>2 ~ |
+  <c, g' c>4 c4 e4 g4 |
+  <c e>4 <g d'>4 <a c>4 b4 |
+  a2. a4 |
+  \mPageBreak
+  <d, d'>2. <d d'>4 |
+  <b b'>2. <b b'>4 |
+  <e b'>2 <c c'>2 |
+  <<
+    {
+      \voiceOne
+      d'2 c2 |
+
+    }
+    \new Voice \relative d {
+      \voiceTwo
+      d1 |
+    }
+  >>
+  \oneVoice
   <g b>2. r4 R1 \mBreak <c, g' c>2. r4 R1 <c g' c>2. <e g>4 <f a>4 <g
   b>4 <a c>4 <b d>4 <c e>2 f,2 g2 ~ <g, g'>2 \mBreak <c g' c>2. r4
   R1 <c g' c>2. r4 R1 <c g' c>2. <e g>4 \mPageBreak <f a>4 <g b>4 <a c>4
@@ -680,9 +743,50 @@ orgelLHUGloriaDVE = \relative c {
   \mBreak | % 105
   \key f \major s1*2
   \voiceTwo
-  f2 e2 s1*3 \mBreak s1*3 f2. c4 e4 bes'4 s2
-  \mPageBreak s1*6 \mBreak s1*6 \mBreak s1*6 \mPageBreak e,2. f4 e1 ~ s1*4
-  \mBreak s1*6 \bar "||"
+
+  c1~ |
+  c4 d8 e f g a bes |
+  c1 |
+  f,2. g8 a |
+  bes2 a4 g |
+  %f2 e2 s1*3 \mBreak s1*2
+  %Domine
+  \oneVoice
+  c4 b c c,4 ~ |
+  \voiceTwo c4 c c c~ |
+  c4 c c c~ |
+  c c c c~ |
+  c8 cis d e f a c cis |
+  d4 d4 d4 d4 |
+  g,2 a4 bes |
+  \mPageBreak
+  s1*3
+  \mBreak
+  g4 fis g2 |
+  a1~ |
+  <a d,>2. r4 |
+  a4 a a a |
+  g4 f8 g a4 r |
+  R1 \mBreak
+  R1 |
+  R1 |
+  g4 fis g r |
+  c4 c, d e |
+  f e f a |
+  R1 |
+  \mPageBreak
+  s1*2 |
+
+  s1*4
+  \mBreak
+  \voiceTwo
+  s1 |
+  c4 a g c, |
+  f2. r4 |
+  d1 |
+  g1~ |
+  g2. r4 |
+  \bar "||"
   \mBreak | % 146
   \key c \major s1*6 \mPageBreak s1*6 \mBreak s1*6 \mBreak s1*5
   \mPageBreak s1*8 \bar "|."

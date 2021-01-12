@@ -8,6 +8,7 @@
 \include "../Noten/generaldefinitions.ly"
 \include "../Noten/mydrums2.ly"
 \include "../Noten/drumdefinitions.ly"
+\include "../Noten/mBreak.ly"
 
 tempTranspose = #(define-music-function (parser location music)
                    (ly:music?)
@@ -16,10 +17,6 @@ tempTranspose = #(define-music-function (parser location music)
                           (alteration (or (ly:get-option 'alteration) 0))
                           (to (ly:make-pitch octave note alteration)))
                      #{ \transpose c c  $music #}))
-
-
-mPageBreak = { }
-mBreak = { }
 
 globalAgnusGounodDVE = {
   \taktstil
@@ -34,32 +31,45 @@ vorspielpausenAgnusGounodDVE = {
 }
 
 sopranTextAgnusGounodDVE = \lyricmode {
-  A -- gnus De -- "i," qui tol -- lis pec -- ca -- ta mun --
-  "di:" mi -- se -- re -- re no --  "bis," mi -- se -- re
-  -- re no --  "bis," mi -- se -- re -- "re," mi -- se
-  -- re -- re no -- "bis." A -- gnus De -- "i," qui
-  tol -- lis pec -- ca -- ta mun -- "di:" mi -- se -- re -- re no
-  --  "bis," mi -- se -- re -- re no -- 
-  "bis." A -- gnus De -- "i,"  A -- gnus De -- "i,"
-   A -- gnus De -- "i," qui tol -- lis pec -- ca -- ta mun
-  -- "di:" do -- na no -- bis pa -- "cem," do -- na no -- bis pa --
-  "cem," do -- na no -- bis pa -- "cem," do -- na no
-  -- bis pa -- "cem," do -- na no -- bis pa -- "cem." 
+  A -- gnus De -- i, qui tol -- lis
+  pec -- ca -- ta mun -- di:
+  mi -- se -- re -- re no -- bis,
+  mi -- se -- re -- re no -- bis,
+  mi -- se -- re -- re,
+  mi -- se -- re -- re no -- bis.
+  A -- gnus De -- i, qui tol -- lis
+  pec -- ca -- ta mun -- di:
+  mi -- se -- re -- re no -- bis,
+  mi -- se -- re -- re no -- bis.
+  A -- gnus De -- i,  A -- gnus De -- i,
+  A -- gnus De -- i,
+  qui tol -- lis pec -- ca -- ta mun -- di: 
+  do -- na no -- bis pa -- cem, 
+  do -- na no -- bis pa -- cem, 
+  do -- na no -- bis pa -- cem, 
+  do -- na no -- bis pa -- cem, 
+  do -- na no -- bis pa -- cem.
 }
 
 altTextAgnusGounodDVE = \lyricmode {
-  A -- gnus De -- "i," qui tol
-  -- lis pec -- ca -- ta mun -- "di:" mi -- se -- re -- re no --
-   "bis," mi -- se -- re -- re no --  "bis," mi --
-  se -- re -- "re," mi -- se -- re -- re no -- "bis." 
-  A -- gnus De -- "i," qui tol -- lis pec -- ca -- ta mun -- "di:"
-  mi -- se -- re -- re no --  "bis," mi -- se -- re -- re
-  no --  "bis." A -- gnus De -- "i,"  
-  A -- gnus De -- "i,"  A -- gnus De -- "i," qui tol --
-  lis pec -- ca -- ta mun -- "di:" do -- na no -- bis pa -- "cem," do
-  -- na no -- bis pa -- "cem," do -- na no -- bis pa
-  -- "cem," do -- na no -- bis pa -- "cem," do -- na no -- bis
-  pa -- "cem." 
+  A -- gnus De -- i, qui tol -- lis 
+  pec -- ca -- ta mun -- di: 
+  mi -- se -- re -- re no -- bis, 
+  mi -- se -- re -- re no -- bis, 
+  mi -- se -- re -- re, mi -- se -- re -- re no -- bis.
+  A -- gnus De -- i, qui tol -- lis 
+  pec -- ca -- ta mun -- di:
+  mi -- se -- re -- re no -- bis, 
+  mi -- se -- re -- re no -- bis. 
+  A -- gnus De -- i, A -- gnus De -- i,  
+  A -- gnus De -- i, qui tol -- lis 
+  pec -- ca -- ta mun -- di: 
+  do -- na no -- bis pa -- cem, 
+  do -- na no -- bis pa -- cem, 
+  do -- na no -- bis pa -- cem, 
+  do -- na no -- bis pa -- cem, 
+  do -- na no -- bis
+  pa -- cem.
 }
 
 sopranNotenAgnusGounodDVE = \tempTranspose \relative g' {
@@ -73,7 +83,7 @@ sopranNotenAgnusGounodDVE = \tempTranspose \relative g' {
   g2 e4 r4 | % 244
   d4 a'4 g4 f4 \mBreak | % 245
   g4 ( f8 [ e8 ) ] e4 r4 | % 246
-  e4 ^\crescMarkup c'4 b4 a4 | % 247 
+  e4 ^\crescMarkup c'4 b4 a4 | % 247
   b4 ( a8 [ g8 ) ] g4 r4 | % 248
 
   g4 ^\f e'4 d4 c4 | % 249
@@ -211,7 +221,7 @@ orgelRHOAgnusGounodDVE = \relative g' {
   \voiceOne <e g>4 -\crescMarkup <f a>4 <g bes>4 <a c>4
   \mBreak | % 268
   <g bes>2 <f a>4 \oneVoice r4 | % 269
-  \voiceOne 
+  \voiceOne
   <b, d>4 _\dimMarkup <c e>4 <d f>4 <e g>4 |
   \barNumberCheck #270
   <b d f>2 <c e>4 r4 | % 271
@@ -298,7 +308,7 @@ orgelLHUAgnusGounodDVE = \relative c {
   c'2 c,2 \mPageBreak f2. d4 \rest d'2 d,2 g2 g4 g4
   g,1 ~ g1 ~ g1 ~ \mBreak g1 c1 c1 c1 ~ c2. d4 \rest c1 \mBreak f2. r4 |
   g,1 a2. d4 \rest g,1 ~ g4 a4 b4 c4 g1 \mPageBreak c1 s1 c1 ~ c2 c2
-  c1 ~ c2 c \mBreak 
+  c1 ~ c2 c \mBreak
   c1 ~ c2 c |
   c1 ~ c1 ~ c1 ~ c1 s1*2 \bar "|."
 }

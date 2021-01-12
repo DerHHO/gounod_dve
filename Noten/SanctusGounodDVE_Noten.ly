@@ -8,6 +8,7 @@
 \include "../Noten/generaldefinitions.ly"
 \include "../Noten/mydrums2.ly"
 \include "../Noten/drumdefinitions.ly"
+\include "../Noten/mBreak.ly"
 
 tempTranspose = #(define-music-function (parser location music)
                    (ly:music?)
@@ -29,8 +30,7 @@ globalSanctusGounodDVE = {
   \set Score.currentBarNumber = 177
 }
 
-mBreak = { }
-mPageBreak = { }
+
 
 vorspielpausenSanctusGounodDVE = {
 

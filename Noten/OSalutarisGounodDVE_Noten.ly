@@ -8,6 +8,7 @@
 \include "../Noten/generaldefinitions.ly"
 \include "../Noten/mydrums2.ly"
 \include "../Noten/drumdefinitions.ly"
+\include "../Noten/mBreak.ly"
 
 tempTranspose = #(define-music-function (parser location music)
                    (ly:music?)
@@ -16,9 +17,6 @@ tempTranspose = #(define-music-function (parser location music)
                           (alteration (or (ly:get-option 'alteration) 0))
                           (to (ly:make-pitch octave note alteration)))
                      #{ \transpose c c  $music #}))
-
-mBreak = { }
-mPageBreak = { }
 
 
 globalOSalutarisGounodDVE = {
@@ -137,14 +135,14 @@ orgelRHOOSalutarisGounodDVE = \relative f' {
   <gis b>2 <a c>2 ~ \mBreak | % 228
   <a cis>2 _\f <bes d>4 b4 \rest | % 229
   <f a>2 _\p <e g>2 | \barNumberCheck #230
-  <c f>2. r4 | % 231
+  f2. r4 | % 231
   <f a>1 ~ _\p | % 232
-  <f a c>2 _\> <e g bes>2 \mBreak | % 233
-  <f a>2. -\! _\p r4 | % 234
+  <f a c>2 <e g bes>2 \mBreak | % 233
+  <f a>2. _\p r4 | % 234
   f1 _\pp | % 235
   <f a>2 <bes, e g>2 | % 236
-  <a c f>1 ~ ~ ~ | % 237
-  <a c f>2. r4 \bar "|."
+  f'1 ~ ~ ~ | % 237
+  f2. r4 \bar "|."
   \mPageBreak | % 238
 }
 
@@ -156,7 +154,12 @@ orgelRHUOSalutarisGounodDVE = \relative f' {
   \mBreak s1*4 \mPageBreak e2 s2*5 f1 ~
   \mBreak
   f2. b4 \rest |
-  c,1 ~ s1*3 \mBreak s1 c2 d2 c1 ~ s1*2 \bar "|."
+  c,1 ~ 
+  c2. r4 |
+  s1*2 \mBreak s1 c2 d2 
+  c1 ~ |
+  <c a>1 ~ |
+  q2. r4 \bar "|."
   \mPageBreak | % 238
 }
 
@@ -173,12 +176,22 @@ orgelLHOOSalutarisGounodDVE = \relative g {
   \globalOSalutarisGounodDVE
   \voiceOne
   a2 bes4 g4 a4 <g bes>4 a4. d,8 \rest a'2 f4
-  bes4 a4 g4 a8 d,8 \rest d4 \rest \mBreak <f a>2 <bes, bes'>4 <bes' d>4
-  c2 ~ c4 d,4 \rest f'2. d4 c4 b4 c8 [ c,8 e8 g8 ] \mBreak c2 ~ <a c>2
+  bes4 a4 g4 a8 d,8 \rest d4 \rest \mBreak 
+  \oneVoice
+  <f a>2 <bes, bes'>4 <bes' d>4
+  \voiceOne 
+  c2 ~ c4 r4 |
+  f2. d4 |
+  \oneVoice
+  c4 b4 c8 [ c,8 e8 g8 ] \mBreak c2 ~ <a c>2
   ~ <g c>2 ~ <g bes>8 [ g8 bes8 d8 ] es2 ~ <c es>2 ~ <bes es>2 ~ <bes
-  d>8 r8 <bes, bes'>4 \mPageBreak <c c'>2 <d d'>4 <bes bes'>4 c'4 b4
+  d>8 r8 <bes, bes'>4 \mPageBreak <c c'>2 <d d'>4 <bes bes'>4 
+  \voiceOne
+  c'4 b4
   c4 d,4 \rest c'2 \rest e2 d2 c2 \mBreak es2 d4 d,4 \rest a'2 \rest
-  bes2 <f a>2. r4 r2 d'2 ^\< c1 -\! \mBreak d2. r4 f,1 c1 f,4 f'4 c4 a4
+  bes2 
+  \oneVoice
+  <f a>2. r4 r2 d'2 ^\< c1^\> \mBreak d2.\! r4 f,1 c1 f,4 f'4 c4 a4
   <f f'>2. r4 \bar "|."
   \mPageBreak | % 238
 }
@@ -187,7 +200,7 @@ orgelLHUOSalutarisGounodDVE = \relative g {
   \globalOSalutarisGounodDVE
   \voiceTwo
   f2 bes,2 c2 f4. d8 \rest f2 bes,2 c2 f8 d8
-  \rest d4 \rest \mBreak s1 c'4 c,4 f4 d4 \rest f2 bes2 s1 \mBreak s1*4
+  \rest d4 \rest \mBreak s1 c'4 c,4 f4 r4 f2 bes2 s1 \mBreak s1*4
   \mPageBreak s1 c,2. d4 \rest f1 ~ f1 ~ \mBreak f2 bes4 d,4 \rest c1
   s1*3 \mBreak s1 a2 bes2 s1*3 \bar "|."
   \mPageBreak | % 238

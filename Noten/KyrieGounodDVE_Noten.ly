@@ -8,6 +8,7 @@
 \include "../Noten/generaldefinitions.ly"
 \include "../Noten/mydrums2.ly"
 \include "../Noten/drumdefinitions.ly"
+\include "../Noten/mBreak.ly"
 
 tempTranspose = #(define-music-function (parser location music)
                    (ly:music?)
@@ -18,8 +19,6 @@ tempTranspose = #(define-music-function (parser location music)
                      #{ \transpose c c  $music #}))
 
 
-mBreak = { }
-mPageBreak = { }
 
 globalKyrieGounodDVE = {
   \taktstil
@@ -34,25 +33,34 @@ vorspielpausenKyrieGounodDVE = {
 }
 
 sopranTextKyrieGounodDVE = \lyricmode {
-  Ky -- ri -- e e -- le -- i -- "son," e -- le -- i -- "son," Ky --
-  ri -- e e -- le -- i -- "son," e -- le -- i -- "son," Ky -- ri
-  -- "e," Ky -- ri -- e e -- le -- i -- "son." Chri -- ste e -- le --
-  i -- "son," Chri -- ste e -- le -- i -- "son," e -- le -- i --
-  "son," e -- le -- i -- "son," Chri -- ste e -- le -- i -- "son,"
-  Chri -- ste e -- le -- i -- "son," e -- le -- i --
-  "son." Ky -- ri -- e e -- le -- i -- "son," e -- le -- i --
-  "son," Ky -- ri -- e e -- le -- i -- "son," e -- le -- i --
-  "son," Ky -- ri -- "e," Ky -- ri -- e e -- le -- i -- "son," 
-  e -- le -- i -- "son," e -- le -- i -- "son," e -- le --
-  i -- "son," e -- le -- i -- "son," Ky -- ri -- e e -- le -- i
-  -- "son," e -- le -- i -- "son."
+  Ky -- ri -- e e -- le -- i -- son, 
+  e -- le -- i -- son, 
+  Ky -- ri -- e e -- le -- i -- son, 
+  e -- le -- i -- son, 
+  Ky -- ri -- e, 
+  Ky -- ri -- e e -- le -- i -- son. 
+  Chri -- ste e -- le -- i -- son, 
+  Chri -- ste e -- le -- i -- son, 
+  e -- le -- i -- son, e -- le -- i -- son, 
+  Chri -- ste e -- le -- i -- son,
+  Chri -- ste e -- le -- i -- son, 
+  e -- le -- i -- son. 
+  Ky -- ri -- e e -- le -- i -- son, 
+  e -- le -- i -- son, 
+  Ky -- ri -- e e -- le -- i -- son, 
+  e -- le -- i -- son, Ky -- ri -- e, 
+  Ky -- ri -- e e -- le -- i -- son,
+  e -- le -- i -- son, e -- le -- i -- son, 
+  e -- le -- i -- son, e -- le -- i -- son, 
+  Ky -- ri -- e e -- le -- i -- son, 
+  e -- le -- i -- son.
 }
 
 
 
 sopranNotenKyrieGounodDVE = \tempTranspose \relative c' {
   \globalKyrieGounodDVE
-	\autoBeamOff
+  \autoBeamOff
   R1*7 \mBreak | % 8
   R1*2  | \barNumberCheck #10
   e4. e8 e4 e4 | % 11
@@ -110,7 +118,7 @@ sopranNotenKyrieGounodDVE = \tempTranspose \relative c' {
 
 altNotenKyrieGounodDVE = \tempTranspose \relative c' {
   \globalKyrieGounodDVE
-	\autoBeamOff
+  \autoBeamOff
   R1*7 \mBreak | % 8
   R1*6 \mBreak | % 14
   e4. e8 e4 e4 | % 15
@@ -161,16 +169,24 @@ altNotenKyrieGounodDVE = \tempTranspose \relative c' {
 }
 
 altTextKyrieGounodDVE = \lyricmode {
-  Ky -- ri -- e e -- le -- i -- "son," e -- le -- i -- "son," Ky --
-  ri -- "e," Ky -- ri -- e e -- le -- i -- "son." Chri -- ste e -- le
-  -- i -- "son," Chri -- ste e -- le -- i -- "son," e -- le -- i
-  -- "son," e -- le -- i -- "son," Chri -- ste e -- le -- i -- "son,"
-  Chri -- ste e -- le -- i -- "son," Chri -- ste e -- le -- i --
-  "son," e -- le -- i -- "son." Ky -- ri -- e e -- le -- i -- "son," e
-  -- le -- i -- "son," Ky -- ri -- "e," Ky -- ri -- e e -- le --
-  i -- "son,"  e -- le -- i -- "son," e -- le -- i -- "son," e
-  -- le -- i -- "son," e -- le -- i -- "son," Ky -- ri -- e e -- le --
-  i -- "son," e -- le -- i -- "son." 
+  Ky -- ri -- e e -- le -- i -- son, 
+  e -- le -- i -- son, 
+  Ky -- ri -- e, Ky -- ri -- e e -- le -- i -- son. 
+  Chri -- ste e -- le -- i -- son, 
+  Chri -- ste e -- le -- i -- son, 
+  e -- le -- i -- son, e -- le -- i -- son, 
+  Chri -- ste e -- le -- i -- son,
+  Chri -- ste e -- le -- i -- son, 
+  Chri -- ste e -- le -- i -- son, 
+  e -- le -- i -- son. 
+  Ky -- ri -- e e -- le -- i -- son, 
+  e -- le -- i -- son, Ky -- ri -- e, 
+  Ky -- ri -- e e -- le -- i -- son,  
+  e -- le -- i -- son, e -- le -- i -- son, 
+  e -- le -- i -- son, 
+  e -- le -- i -- son, 
+  Ky -- ri -- e e -- le -- i -- son, 
+  e -- le -- i -- son.
 }
 
 orgelRHOKyrieGounodDVE = \relative e' {
@@ -184,7 +200,7 @@ orgelRHOKyrieGounodDVE = \relative e' {
   g'2 f4 d4 | % 7
   c4 b4 c4 a4 \mBreak | % 8
   g4 a4 b4 d4 | % 9
-	\oneVoice
+  \oneVoice
   <e, c'>2. r4 | \barNumberCheck #10
   e1 | % 11
   d2 c4 a'4 | % 12
@@ -210,7 +226,7 @@ orgelRHOKyrieGounodDVE = \relative e' {
   <e c'>4. <d b'>8 <c a'>8 [ c8 e8 a8 ] \mBreak | % 32
   <a c>2 <e a>4 <c' e>4 | % 33
   \voiceOne
-	<c e>4. <b d>8 <a c>4 \oneVoice r4  | % 34
+  <c e>4. <b d>8 <a c>4 \oneVoice r4  | % 34
   <a c>4. <g b>8 <fis a>4 <c' e>4 | % 35
   <b d>4. <a c>8 <g b>4 a8 [ c8 ] | % 36
   <g b>2 <fis a>2 | % 37
@@ -230,13 +246,13 @@ orgelRHOKyrieGounodDVE = \relative e' {
   <g bes>1 | % 51
   a1 | % 52
   \voiceOne
-	d4 b4 a4 g4 | % 53
-	\oneVoice
+  d4 b4 a4 g4 | % 53
+  \oneVoice
   <e g>2. c'4 | % 54
   <g bes>1 | % 55
-  <f a>1 ~ \mPageBreak | % 56
+  a1 \mPageBreak | % 56
   \voiceOne
-	b2 a4 g4 | % 57
+  b2 a4 g4 | % 57
   \oneVoice
   <e c'>2. r4 | % 58
   <f a>2. r4 | % 59
@@ -250,24 +266,25 @@ orgelRHOKyrieGounodDVE = \relative e' {
 orgelRHUKyrieGounodDVE = \relative g' {
   \globalKyrieGounodDVE
   \voiceTwo
-  s1*5 
+  s1*5
   bes2 a2 g2 e2 \mBreak f1
-  s1 
-  c1 
-  b2 c2 ~ 
+  s1
+  c1
+  b2 c2 ~
   c2 s2 |
-  s1 \mBreak s1*6 
-  \mPageBreak 
-  s1*5 
+  s1 \mBreak s1*6
+  \mPageBreak
+  s1*5
   e2 ~ e8 s4. \mBreak
-  s1*6 \mBreak 
-  s1 e2. b'4 \rest s4*7 e,4 
-  s1*2 \mPageBreak 
+  s1*6 \mBreak
+  s1 e2. s4 s4*7 e4
+  s1*2 \mPageBreak
   s1 |
   s2 c2 ~ |
   c2 s2 |
   s1*3
-  \mBreak s1*6 \mBreak s1 f1 ~ f1 s1*3 \mPageBreak <d f>1 s1*6 \bar "|."
+  \mBreak s1*6 \mBreak s1 f1 ~ f1 s1*2
+  f1~ \mPageBreak <d f>1 s1*6 \bar "|."
   \mBreak | % 63
 }
 
@@ -280,15 +297,23 @@ orgelRHNotenKyrieGounodDVE = \tempTranspose \relative c' {
 }
 
 orgelLHOKyrieGounodDVE = \relative c {
-  \clef "bass" 
+  \clef "bass"
   \globalKyrieGounodDVE
-	\voiceOne
-  <c g'>1 ~ <g g'>2. \oneVoice  r4 <g' b>1 ~
-  <gis b>2 <a c>4 \oneVoice r4 
   \voiceOne
-  c1 ~ c4 cis4 d4 f4 e4 d4 c2 \mBreak b4 c4 d4 b4
-  <c, g' c>2. r4 c4 e4 a4 g4 ~ g4 f4 e2 d4 a'4 b4 g4 ~ <c, g'>4 r4 r2
-  \mBreak c4 e4 g4 c4 a4 b4 c4 e,4 f4 g4 a4 b4 
+  <c g'>1 ~ |
+  <g g'>2. \oneVoice r4 |
+  <g' b>1 ~ |
+  <gis b>2 <a c>4 \oneVoice r4 |
+  \voiceOne
+  c1 ~ |
+  c4 cis4 d4 f4 |
+  e4 d4 c2 | \mBreak
+  b4 c4 d4 b4 |
+  \oneVoice <c, g' c>2. r4 |
+  \voiceOne c4 e4 a4 g4 ~ |
+  g4 f4 e2 d4 a'4 b4 g4 ~
+  <c, g'>4 \oneVoice r4 r2 \voiceOne
+  \mBreak c4 e4 g4 c4 a4 b4 c4 e,4 f4 g4 a4 b4
   \oneVoice
   <c, c'>4 r4 r2 <a c>4 <c
   e>4 <e a>4 <a c>4 <b d>2 c4 <f, c'>4 \mPageBreak g2 ~ <g, f' g>2
@@ -296,76 +321,80 @@ orgelLHOKyrieGounodDVE = \relative c {
   fis8 [ gis8 ] a4 r4 \mBreak d4 e4 f4 e4 d4 e4 f4 e8 [ d8 ] c4 d8 [ e8
   ] f4 d4 e4 dis4 e4 e,4 a4 e4 c4 a4 e'4 fis8 [ gis8 ] a4 r4 \mBreak a4
   e4 c4 a4 e'4 fis8 [ gis8 ] a4 b8 [ c8 ] d4 d,4 ~ d8 [ d'8 e8 fis8 ]
-  g4 d4 e4 c4 d2 <d, c'>2 <g b>4 r4 r2 \mPageBreak 
+  g4 d4 e4 c4 d2 <d, c'>2 <g b>4 r4 r2 \mPageBreak
   \voiceOne
   c,4 e4 a4 g4 ~ g4 f4
-  e2 d4 a'4 b4 g4 ~ <c, g'>4 
+  e2 d4 a'4 b4 g4 ~ <c, g'>4
   \oneVoice
-  r4 r2 
+  r4 r2
   \voiceOne
-  c4 e4 g4 c4 a4 b4 c4 e,4 \mBreak f4
-  g4 a4 b4 <c, c'>4 
-  \oneVoice
-  r4 r2 <a c>4 
-  <c e>4 <e a>4 <a c>4 
+  c4 e4 g4 c4 a4 b4 c4 e,4 \mBreak 
+  f4 g4 a4 b4 |
+  c4 \oneVoice r4 r2 |
+  <a, c>4 <c e>4 <e a>4 <a c>4 |
   <b d>2 c4 <f, c'>4
-  g2 ~ <g, f' g>2 
+  g2 ~ <g, f' g>2
   \voiceOne
-  <e' g>4 c'4 c4 c4 ~ \mBreak 
-  c4 c4 d,4 e4 
-  f4 a4 d4 c4 
-  b4 g4 a4 b4 
-  c1 ~ 
+  <e' g>4 c'4 c4 c4 ~ \mBreak
   c4 c4 d,4 e4
-  f4 c'4 b4 a4 \mPageBreak 
+  f4 a4 d4 c4
+  b4 g4 a4 b4
+  c1 ~
+  c4 c4 d,4 e4
+  f4 c'4 b4 a4 \mPageBreak
   \oneVoice
-  <c, g'>1 ~ 
-  <c g' c>2. r4 
-  <f a c>2. r4 
-  <f a c>2. r4 
-  <f b>1 
-  <c g' c>1~ 
+  g1 ~
+  <g c>2. r4
+  <f a c>2. r4
+  <f a c>2. r4
+  <f b>1
+  <c g' c>1~
   <c g' c>4 r4 r2 \bar "|."
 }
 
 orgelLHUKyrieGounodDVE = \relative g, {
   \clef "bass"
-  s1*4 
-  \voiceTwo
-  c4 d4 dis4 e4 
-  f1 
-  g1 ~ \mBreak 
-  g1 
-  s1 
-  c,1 ~ 
-  c1 ~ 
-  c1 
-  s1 
-  \mBreak 
-  c1 ~ 
-  c1 ~ 
-  c1 ~ 
-  s1*3 \mPageBreak
-  s1*6 \mBreak 
-  s1*6 \mBreak 
-  s1*6 \mPageBreak 
-  c1 ~ 
-  c1 ~ 
-  c1 
-  s1 
-  c1 ~ 
-  c1 ~
-  \mBreak 
-  c1 ~ 
   s1*4
-  c1 \mBreak 
-  c1 ~ 
-  c1 
-  c1 ~ 
-  c4 c4 c4 c4 
-  c1 ~ 
+  \voiceTwo
+  c4 d4 dis4 e4
+  f1
+  g1 ~ \mBreak
+  g1
+  s1
+  c,1 ~
   c1 ~
-  \mPageBreak s1*7 \bar "|."
+  c1
+  s1
+  \mBreak
+  c1 ~
+  c1 ~
+  c1 ~ |
+  c4 s4 s2 |
+  s1*2 \mPageBreak
+  s1*6 \mBreak
+  s1*6 \mBreak
+  s1*6 \mPageBreak
+  c1 ~
+  c1 ~
+  c1
+  s1
+  c1 ~
+  c1 ~
+  \mBreak
+  c1 ~ |
+  c4 s4 s2 |
+  s1*3
+  c1 \mBreak
+  c1 ~
+  c1
+  c1 ~
+  c4 c4 c4 c4
+  c1 ~
+  c1 ~
+  \mPageBreak 
+  c~ |
+  c2. s4 |
+  s1*5 \bar "|."
   \mBreak | % 63
 }
 

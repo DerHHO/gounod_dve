@@ -36,31 +36,52 @@ vorspielpausenSanctusGounodDVE = {
 
 }
 
+hosannaTextSanctusGounodDVE = \lyricmode {
+  Ho -- san -- na, ho -- san -- na,
+  ho -- san -- na in ex -- cel -- sis,
+  ho -- san -- na, ho -- san -- na, ho -- san -- na in
+  ex -- cel -- sis. __
+}
+
 sopranTextSanctusGounodDVE = \lyricmode {
-  Sanc -- "tus," Sanc -- "tus," Sanc -- tus Do
-  -- mi -- nus De -- us Sa -- ba -- "oth," Sanc -- "tus," Sanc
-  -- "tus," Sanc -- tus Do -- mi -- nus De -- us Sa -- ba --
-  "oth." Ple -- ni sunt coe -- li et ter -- ra glo -- ri -- a Tu --
-  "a," ple -- ni sunt coe -- li et ter -- ra glo -- ri -- a Tu -- "a."
-  Ho -- san -- "na," ho -- san -- "na," ho -- san -- na in ex -- cel
-  -- "sis," ho -- san -- "na," ho -- san -- "na," ho -- san -- na in
-  ex -- cel -- "sis." 
+  San -- ctus, San -- ctus, San -- ctus Do -- mi -- nus
+  De -- us Sa -- ba -- oth,
+  San -- ctus, San -- ctus, San -- ctus
+  Do -- mi -- nus De -- us Sa -- ba -- oth.
+  Ple -- ni sunt cœ -- li -- et ter -- ra glo -- ri -- a tu -- a,
+  ple -- ni sunt cœ -- li -- et ter -- ra glo -- ri -- a tu -- a.
+  \hosannaTextSanctusGounodDVE
 }
 
 altTextSanctusGounodDVE = \lyricmode {
-  Sanc -- "tus," Sanc -- "tus," Sanc -- tus Do --
-  mi -- nus De -- us Sa -- ba -- "oth," Sanc -- "tus," Sanc --
-  "tus," Sanc -- tus Do -- mi -- nus De -- us Sa -- ba -- "oth."
-  Ple -- ni sunt coe -- li et ter -- ra glo -- ri -- a Tu -- "a." Ho
-  -- san -- "na," ho -- san -- "na," ho -- san -- na in ex -- cel --
-  "sis," ho -- san -- "na," ho -- san -- "na," ho -- san -- na in ex
-  -- cel -- "sis." 
+  San -- ctus, San -- ctus,
+  San -- ctus Do -- mi -- nus
+  De -- us Sa -- ba -- oth,
+  San -- ctus, San -- ctus, San -- ctus
+  Do -- mi -- nus De -- us Sa -- ba -- oth.
+  Ple -- ni sunt cœ -- li -- et ter -- ra
+  glo -- ri -- a tu -- a.
+  \hosannaTextSanctusGounodDVE
+}
+
+sopranHosannaSanctusGounodDVE = \relative g' {
+  g16 | % 202
+  g2 e4 r8. c'16 | % 203
+  c2 g4 r8. e'16 | % 204
+  e4 d4 c4 b4 \mBreak | % 205
+  a2 g4 r8. c16 | % 206
+  c2 b4 r8. d16 | % 207
+  d2 c4 r8. c16 | % 208
+  c4 f4 e4 d4 | % 209
+  e2 ( d2 ) |
+  c1 ~ | % 211
+  c4 r4 r2 \bar "|."
+  \mPageBreak | % 212
 }
 
 sopranNotenSanctusGounodDVE = \tempTranspose \relative g' {
   \globalSanctusGounodDVE
-  \time 4/4  | % 177
-  R1 
+  R1
   g2^\f g4 r4 | % 179
   c2 c4 r4 | \barNumberCheck #180
   e2 d2 | % 181
@@ -84,23 +105,26 @@ sopranNotenSanctusGounodDVE = \tempTranspose \relative g' {
   c2 c4 c4 | % 199
   d2 d2 | \barNumberCheck #200
   e4.. e16 e2 | % 201
-  e2 d4 r8. g,16 | % 202
-  g2 e4 r8. c'16 | % 203
-  c2 g4 r8. e'16 | % 204
-  e4 d4 c4 b4 \mBreak | % 205
-  a2 g4 r8. c16 | % 206
-  c2 b4 r8. d16 | % 207
-  d2 c4 r8. c16 | % 208
-  c4 f4 e4 d4 | % 209
-  e2 ( d2 ) | \barNumberCheck #210
-  c1 ~ | % 211
-  c4 r4 r2 \bar "|."
-  \mPageBreak | % 212
+  e2 d4 r8.
+  \sopranHosannaSanctusGounodDVE
+}
+
+altHosannaSanctusGounodDVE = \relative g' {
+  g16 | % 202
+  e2 c4 r8. e16 | % 203
+  e2 e4 r8. c'16 | % 204
+  c4 b4 a4 g4 \mBreak | % 205
+  f2 e4 r8. e16 | % 206
+  e2 d4 r8. f16 | % 207
+  f2 e4 r8. a16 | % 208
+  a4 f4 g4 a4 | % 209
+  g2 ( f2 ) |
+  e1 ~ | % 211
+  e4 r4 r2 \bar "|."
 }
 
 altNotenSanctusGounodDVE = \tempTranspose \relative c' {
   \globalSanctusGounodDVE
-  \time 4/4  | % 177
   R1 | % 178
   e2 ^\f e4 r4 | % 179
   e2 e4 r4 | \barNumberCheck #180
@@ -121,22 +145,30 @@ altNotenSanctusGounodDVE = \tempTranspose \relative c' {
   a2 a4 a4 | % 199
   b2 b2 | \barNumberCheck #200
   c4.. c16 c2 | % 201
-  c2 b4 r8. g16 | % 202
-  e2 c4 r8. e16 | % 203
-  e2 e4 r8. c'16 | % 204
-  c4 b4 a4 g4 \mBreak | % 205
-  f2 e4 r8. e16 | % 206
-  e2 d4 r8. f16 | % 207
-  f2 e4 r8. a16 | % 208
-  a4 f4 g4 a4 | % 209
-  g2 ( f2 ) | \barNumberCheck #210
-  e1 ~ | % 211
-  e4 r4 r2 \bar "|."
-  \mPageBreak | % 212
+  c2 b4 r8.
+  \altHosannaSanctusGounodDVE
+}
+
+orgelRHOHosannaGounodDVE = \relative g' {
+  \oneVoice
+  <e g>2 <c e>4 r4 | % 203
+  <e c'>2 ~ <e g>4 r4 | % 204
+  \voiceOne
+  <c' e>4 <b d>4 <a c>4 <g b>4 \mBreak | % 205
+  <f a>2 <e g>4 r4 | % 206
+  \oneVoice
+  <g c>2 ~ <g b>4 r4 | % 207
+  <f d'>2 <e c'>4 r4 | % 208
+  <a c>4 <f f'>4 <g e'>4 <a d>4 | % 209
+  \voiceOne
+  e'2 <f, d'>2 | 
+  \oneVoice
+  <e g c>1 ~ | % 211
+  <e g c>4 r4 r2 \bar "|."
 }
 
 orgelRHOSanctusGounodDVE = \relative g' {
-  \time 4/4  | % 177
+  \globalSanctusGounodDVE
   <e g c>2. _\f r4 | % 178
   <e g>1 | % 179
   <e c'>1 | \barNumberCheck #180
@@ -161,26 +193,37 @@ orgelRHOSanctusGounodDVE = \relative g' {
   <a c>1 | % 199
   <b d>1 | \barNumberCheck #200
   <c e>1 ~ ~ | % 201
-  <c e>2 <b d>4 b4 \rest | % 202
-  \oneVoice <e, g>2 <c e>4 r4 | % 203
-  <e c'>2 ~ <e g>4 r4 | % 204
-  \voiceOne <c' e>4 <b d>4 <a c>4 <g b>4 \mBreak | % 205
-  <f a>2 <e g>4 b'4 \rest | % 206
-  \oneVoice <g c>2 ~ <g b>4 r4 | % 207
-  <f d'>2 <e c'>4 r4 | % 208
-  <a c>4 <f f'>4 <g e'>4 <a d>4 | % 209
-  \voiceOne e'2 <f, d'>2 | \barNumberCheck #210
-  \oneVoice <e g c>1 ~ ~ ~ | % 211
-  <e g c>4 r4 r2 \bar "|."
+  <c e>2 <b d>4 r4 | % 202
+  \orgelRHOHosannaGounodDVE
+}
+
+orgelRHUHosannaGounodDVE = \relative e' {
+  s1*2 |
+  e4 d4 c2 ~ |
+  \mBreak
+  c2. r4 |
+  s1*3 |
+  g'1 |
+  s1*2 \bar "|."
   \mPageBreak | % 212
 }
 
 orgelRHUSanctusGounodDVE = \relative c' {
-  \time 4/4  s1*7 \mBreak s1*6 d1 \mPageBreak s1*4 
-  \voiceTwo g2 <fis a>2 g1 g1 ~
-  \mBreak g1 ~ g1 ~ g2 <fis a>2 g2. b4 \rest s1*2 e,4 d4 c2 ~ \mBreak c2.
-  b'4 \rest s1*3 g1 s1*2 \bar "|."
-  \mPageBreak | % 212
+  \globalSanctusGounodDVE
+  s1*7 | \mBreak |
+  s1*6 |
+  \voiceTwo
+  d1 |
+  \mPageBreak
+  s1*4
+  g2 <fis a>2 |
+  g1 g1 ~ |
+  \mBreak
+  g1 ~  |
+  g1 ~  |
+  g2 <fis a>2 |
+  g2. r4 |
+  \orgelRHUHosannaGounodDVE
 }
 
 orgelRHNotenSanctusGounodDVE = \tempTranspose \relative c' {
@@ -191,33 +234,89 @@ orgelRHNotenSanctusGounodDVE = \tempTranspose \relative c' {
   >>
 }
 
+orgelLHOHosannaGounodDVE = \relative c {
+  \oneVoice
+  <c g'>2. r4
+  <c g' c>2. r4 |
+  \voiceOne
+  c'4 b4 a4 <g b>4 | \mBreak
+  <f a>2 <e g>4 r4 |
+  e'2 d4 r4 |
+  \oneVoice
+  <g, b>2 <a c>4 r4 |
+  \voiceOne
+  c1 ~ |
+  c2 b2 |
+  c1~ |
+  c4 r4 r2 \bar "|."
+}
+
 orgelLHOSanctusGounodDVE = \relative c, {
-  \time 4/4  <c c'>2. r4 c''1 <a c>1 <e c'>2 <g b>2 <a c>2 <g bes c>2
-  <f a c>2 <d a' d>2
-  \voiceOne c'2 d2 |
+  \time 4/4  <c c'>2. r4  |
+  c''1 |
+  <a c>1  |
+  <e c'>2 <g b>2  |
+  <a c>2 <g bes c>2 |
+  <f a c>2 <d a' d>2 |
+  \voiceOne
+  c'2 d2 |
   \mBreak
   \oneVoice
-  <c, g' c>2. r4 c'1 <a c>1 <e c'>2
-  <g b>2 <a c>2 <dis, a'>2 <e g>2 <c a'>2 b'2 c2 \mPageBreak <g b>2. r4
+  <c, g' c>2. r4 |
+  c'1 |
+  <a c>1 |
+  <e c'>2 <g b>2  |
+  <a c>2 <dis, a'>2  |
+  <e g>2 <c a'>2 |
   \voiceOne
-  b1 c1 d1 e2 d2 ~ d1 d1 \mBreak e1 <d f>1 <c e>1 ~ ~ <c e>2 <b d>4 d,4
-  \rest <c g'>2. r4 <c g' c>2. r4 c'4 b4 a4 <g b>4 \mBreak <f a>2 <e g>4
-  d4
-  \rest
-  \oneVoice
-  <g e'>2 ~ <g d'>4 r4 <g b>2 <a c>4 r4 \voiceOne c1 ~ c2 b2
-  \oneVoice
-  <c, g' c>1
-  ~ ~ ~ <c g' c>4 r4 r2 \bar "|."
+  b'2 c2 | \mPageBreak
+  b2. r4 |
+  b1 |
+  c1 |
+  d1 |
+  e2 d2 ~ |
+  d1  |
+  d1  |
+  \mBreak
+  e1 |
+  <d f>1 |
+  <c e>1 ~  |
+  <c e>2 <b d>4 r4 |
+  \orgelLHOHosannaGounodDVE
+}
+
+orgelLHUHosannaGounodDVE = \relative g {
+  s1*2 |
+  c,1 ~ | \mBreak
+  c2. r4 |
+  g'2. r4 |
+  s1 |
+  f4 d4 e4 f4 g1~ |
+  <g c,>1~ |
+  q4 r4 r2 |
+  \bar "|."
   \mPageBreak | % 212
 }
 
 orgelLHUSanctusGounodDVE = \relative g {
-  \time 4/4  s1*6 g1 \mBreak s1*6 d1 \mPageBreak s1
-  \voiceTwo g1 ~ g1 ~ g1 ~ g1 ~
-  g1 g1 ~ \mBreak g1 ~ g1 ~ g1 ~ g2. d4 \rest s1*2 c1 ~ \mBreak c2. d4
-  \rest s1*2 f4 d4 e4 f4 g1 ~ s1*2 \bar "|."
-  \mPageBreak | % 212
+  \globalSanctusGounodDVE
+  s1*6 g1 \mBreak
+  s1*6 |
+  d1 | \mPageBreak
+  \voiceTwo
+  g2. r4 |
+  g1 ~ |
+  g1 ~ |
+  g1 ~ |
+  g1 ~ |
+  g1 |
+  g1 ~ |
+  \mBreak
+  g1 ~ |
+  g1 ~ |
+  g1 ~ |
+  g2. r4 |
+  \orgelLHUHosannaGounodDVE
 }
 
 orgelLHNotenSanctusGounodDVE = \tempTranspose \relative c {

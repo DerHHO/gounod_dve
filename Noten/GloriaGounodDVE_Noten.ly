@@ -60,7 +60,7 @@ gemeinsamerTextIGloriaGounodDVE = \lyricmode {
 }
 
 gemeinsamerTextIIGloriaGounodDVE = \lyricmode {
-  Quo -- ni -- am Tu so -- lus San -- ctus,
+  Quo -- ni -- am tu so -- lus San -- ctus,
   tu so -- lus Do -- mi -- nus, tu so -- lus
   Al -- tis -- si -- mus, Je -- su Chri -- ste,
   cum San -- cto Spi -- ri -- tu in glo -- ri -- a De -- i,

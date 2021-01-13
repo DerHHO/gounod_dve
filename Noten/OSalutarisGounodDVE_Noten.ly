@@ -27,9 +27,15 @@ globalOSalutarisGounodDVE = {
   \set Score.currentBarNumber = 212
 }
 
+ablaufzeileOSalutarisGounodDVE = {
+  \globalOSalutarisGounodDVE
+  s1*26
+  \bar "|."
+}
+
 sopranTextOSalutarisGounodDVE = \lyricmode {
   O sa -- lu -- ta -- ris hos
-  -- ti -- "a," quae coe -- li pan -- dis os -- ti --
+  -- ti -- "a," quae cœ -- li pan -- dis os -- ti --
   "um," bel -- la pre -- munt hos -- ti -- li -- "a," bel -- la pre --
   munt hos -- ti -- li -- "a," da ro -- "bur,"  fer au -- xi --
   li -- "um," bel -- la pre -- munt hos -- ti -- li -- "a," da ro --
@@ -39,7 +45,7 @@ sopranTextOSalutarisGounodDVE = \lyricmode {
 
 altTextOSalutarisGounodDVE = \lyricmode {
   O sa -- lu -- ta -- ris hos --
-  ti -- "a," o sa -- lu -- ta -- ris hos -- ti -- "a," quae coe
+  ti -- "a," o sa -- lu -- ta -- ris hos -- ti -- "a," quae cœ
   -- li pan -- dis os -- ti -- "um," bel -- la pre -- munt hos
   -- ti -- li -- "a," bel -- la pre -- munt hos -- ti -- li -- "a," da
   ro -- "bur,"  fer au -- xi -- li -- "um," bel -- la pre --
@@ -116,34 +122,34 @@ orgelRHOOSalutarisGounodDVE = \relative f' {
   c,4 cis4 d4 g4 | % 215
   f4 e4 f8 [ a,8 c8 f8 ] \mBreak | % 216
   a2 <d, f>4 <g bes>4 | % 217
-  <f a>4 <e g>4 <f a>4 <g bes>4 _\markup{
-    \bold\small\italic {cresc.}
-  } | % 218
+  <f a>4 <e g>4 <f a>4 <g bes>4_\crescMarkup |
   c4 cis4 <bes d>4 <a c>8 [ _\dimMarkup <g
   bes>8 ] | % 219
+  \oneVoice
   <f a>2 _\p <e g>4 r4 \mBreak | \barNumberCheck #220
   <e g>2 <d fis a>2 ~ ~ ~ | % 221
   <d fis a>2 ~ <d g bes>4 r4 | % 222
   <g bes>2 _\crescMarkup <f a c>2 ~ ~ ~ | % 223
-  <f a c>2 ~ <f bes d>8 r8 <d bes' d>4 ~ ~ \mPageBreak | % 224
-  <bes' d>4 <a c>8 [ <g bes>8 ] <f a>4 _\markup{
-    \bold\small\italic
-    {dim.}
-  } <d g bes>4 | % 225
+  <f a c>2 ~ <f bes d>8 r8 \voiceOne <d bes' d>4 ~ |
+  \mPageBreak 
+  <bes' d>4 <a c>8 [ <g bes>8 ] <f a>4_\dimMarkup <d g bes>4 | % 225
+  \oneVoice 
   <f a>2 _\p <e g>4 r4 | % 226
   <f a>2 _\p <g bes>2 _\crescMarkup | % 227
+  \voiceOne
   <gis b>2 <a c>2 ~ \mBreak | % 228
   <a cis>2 _\f <bes d>4 b4 \rest | % 229
   <f a>2 _\p <e g>2 | \barNumberCheck #230
   f2. r4 | % 231
+  \oneVoice 
   <f a>1 ~ _\p | % 232
   <f a c>2 <e g bes>2 \mBreak | % 233
   <f a>2. _\p r4 | % 234
+  \voiceOne 
   f1 _\pp | % 235
   <f a>2 <bes, e g>2 | % 236
-  f'1 ~ ~ ~ | % 237
-  f2. r4 \bar "|."
-  \mPageBreak | % 238
+  f'1~ | % 237
+  f2. r4 
 }
 
 orgelRHUOSalutarisGounodDVE = \relative f' {
@@ -159,8 +165,7 @@ orgelRHUOSalutarisGounodDVE = \relative f' {
   s1*2 \mBreak s1 c2 d2 
   c1 ~ |
   <c a>1 ~ |
-  q2. r4 \bar "|."
-  \mPageBreak | % 238
+  q2. r4 
 }
 
 orgelRHNotenOSalutarisGounodDVE = \tempTranspose \relative c' {
@@ -185,25 +190,44 @@ orgelLHOOSalutarisGounodDVE = \relative g {
   \oneVoice
   c4 b4 c8 [ c,8 e8 g8 ] \mBreak c2 ~ <a c>2
   ~ <g c>2 ~ <g bes>8 [ g8 bes8 d8 ] es2 ~ <c es>2 ~ <bes es>2 ~ <bes
-  d>8 r8 <bes, bes'>4 \mPageBreak <c c'>2 <d d'>4 <bes bes'>4 
+  d>8 r8 <bes, bes'>4 \mPageBreak 
+  <c c'>2 <d d'>4 <bes bes'>4 |
   \voiceOne
-  c'4 b4
-  c4 d,4 \rest c'2 \rest e2 d2 c2 \mBreak es2 d4 d,4 \rest a'2 \rest
-  bes2 
+  c'4 b4 c4 r4 
+  r2 e2 |
+  d2 c2 | \mBreak 
+  es2 d4 r4 |
+  r2 bes2 |
   \oneVoice
   <f a>2. r4 r2 d'2 ^\< c1^\> \mBreak d2.\! r4 f,1 c1 f,4 f'4 c4 a4
-  <f f'>2. r4 \bar "|."
-  \mPageBreak | % 238
+  <f f'>2. r4 
 }
 
 orgelLHUOSalutarisGounodDVE = \relative g {
   \globalOSalutarisGounodDVE
   \voiceTwo
-  f2 bes,2 c2 f4. d8 \rest f2 bes,2 c2 f8 d8
-  \rest d4 \rest \mBreak s1 c'4 c,4 f4 r4 f2 bes2 s1 \mBreak s1*4
-  \mPageBreak s1 c,2. d4 \rest f1 ~ f1 ~ \mBreak f2 bes4 d,4 \rest c1
-  s1*3 \mBreak s1 a2 bes2 s1*3 \bar "|."
-  \mPageBreak | % 238
+  f2 bes,2 |
+  c2 f4. r8 |
+  f2 bes,2 |
+  c2 f8 r8 r4 \mBreak |
+  s1 |
+  c'4 c,4 f4 r4 |
+  f2 bes2 |
+  s1 | \mBreak 
+  s1*4 |
+  \mPageBreak 
+  s1 |
+  c,2. r4 |
+  f1 ~ |
+  f1 ~ |
+  \mBreak 
+  f2 bes4 r4 |
+  c,1 |
+  s1*3 |
+  \mBreak 
+  s1 |
+  a2 bes2 |
+  s1*3 |
 }
 
 orgelLHNotenOSalutarisGounodDVE = \tempTranspose \relative c {
@@ -211,6 +235,7 @@ orgelLHNotenOSalutarisGounodDVE = \tempTranspose \relative c {
   <<
     \orgelLHOOSalutarisGounodDVE
     \new Voice \orgelLHUOSalutarisGounodDVE
+    \new Voice \ablaufzeileOSalutarisGounodDVE
   >>
 
 }

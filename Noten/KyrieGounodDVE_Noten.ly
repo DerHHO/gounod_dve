@@ -217,7 +217,9 @@ orgelRHOKyrieGounodDVE = \relative e' {
   <c a'>2 e4 <e c'>4 | % 23
   <e c'>4. <d b'>8 <c a'>8 [ c8 e8 a8 ] | % 24
   <a c>2 <e a>4 <c' e>4 | % 25
+  \voiceOne
   <c e>4. <b d>8 <a c>8 [ e8 a8 c8 ] \mBreak | % 26
+  \oneVoice
   <b d>4. <a c>8 <gis b>2 | % 27
   <b d>4. <a c>8 <gis b>2 | % 28
   <c e>4 <b d>4 <a c>4 <b d>4 | % 29

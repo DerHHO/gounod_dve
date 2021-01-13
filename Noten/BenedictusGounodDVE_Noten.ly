@@ -9,6 +9,7 @@
 \include "../Noten/mydrums2.ly"
 \include "../Noten/drumdefinitions.ly"
 \include "../Noten/OSalutarisGounodDVE_Noten.ly"
+\include "../Noten/SanctusGounodDVE_Noten.ly"
 \include "../Noten/mBreak.ly"
 
 tempTranspose = #(define-music-function (parser location music)
@@ -47,12 +48,14 @@ gemeinsamerTextBenedictusGounodDVE = \lyricmode {
 sopranTextBenedictusGounodDVE = \lyricmode {
   Be -- ne -- di -- ctus,
   \gemeinsamerTextBenedictusGounodDVE
+  \hosannaTextSanctusGounodDVE
 }
 
 altTextBenedictusGounodDVE = \lyricmode {
   Be -- ne -- di -- ctus,
   be -- ne -- di -- ctus, 
   \gemeinsamerTextBenedictusGounodDVE
+  \hosannaTextSanctusGounodDVE
 }
 
 sopranNotenBenedictusGounodDVE = \tempTranspose \relative c'' {
@@ -80,8 +83,10 @@ sopranNotenBenedictusGounodDVE = \tempTranspose \relative c'' {
   f2 ^\pp f4 f4 | % 235
   a2 ( g4.. ) g16 | % 236
   f2. r4 | % 237
-  R1 \bar "|."
-  \mPageBreak | % 238
+  r2 r4 r8.
+  \sopranHosannaSanctusGounodDVE
+  \bar "|."
+  
 
 }
 
@@ -112,15 +117,19 @@ altNotenBenedictusGounodDVE = \tempTranspose \relative c' {
   f2 ^\pp f4 f4 | % 235
   f2 ( e4.. ) e16 | % 236
   f2. r4 | % 237
-  R1 \bar "|."
+  r2 r4 r8.
+  \altHosannaSanctusGounodDVE
+  \bar "|."
 }
 
 orgelRHOBenedictusGounodDVE = \relative f' {
   \orgelRHOOSalutarisGounodDVE
+  \orgelRHOHosannaGounodDVE
 }
 
 orgelRHUBenedictusGounodDVE = \relative f' {
   \orgelRHUOSalutarisGounodDVE
+  \orgelRHUHosannaGounodDVE
 }
 
 orgelRHNotenBenedictusGounodDVE = \tempTranspose \relative c' {
@@ -134,10 +143,12 @@ orgelRHNotenBenedictusGounodDVE = \tempTranspose \relative c' {
 
 orgelLHOBenedictusGounodDVE = \relative g {
   \orgelLHOOSalutarisGounodDVE
+  \orgelLHOHosannaGounodDVE
 }
 
 orgelLHUBenedictusGounodDVE = \relative g {
   \orgelLHUOSalutarisGounodDVE
+  \orgelLHUHosannaGounodDVE
 }
 
 orgelLHNotenBenedictusGounodDVE = \tempTranspose \relative c {

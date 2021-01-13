@@ -1,7 +1,7 @@
 \version "2.18.2"
 #(ly:set-option 'relative-includes #t)
 #(set-default-paper-size "a4")
-#(set-global-staff-size 17)
+#(set-global-staff-size 16)
 
 \include "../Noten/KyrieGounodDVE_Noten.ly"
 \include "../Noten/GloriaGounodDVE_Noten.ly"
@@ -94,7 +94,7 @@ print-all-headers = ##f
   
   \score {
     \header {
-      piece = \markup { \larger \larger \larger { Benedictus } }
+      piece = \markup { \larger \larger \larger { Sanctus } }
     }
     \removeWithTag #'transponierendepartitur
     \removeWithTag #'klavierauszug

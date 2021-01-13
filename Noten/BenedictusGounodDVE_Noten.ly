@@ -20,13 +20,14 @@ tempTranspose = #(define-music-function (parser location music)
                           (to (ly:make-pitch octave note alteration)))
                      #{ \transpose c c  $music #}))
 
+#(define taktkorrektur-benedictus-gounoddve 211)
 
 globalBenedictusGounodDVE = {
   \taktstil
   \accidentalStyle modern-voice
   \key f \major \time 4/4 | % 212
   \tempo "Adagio"
-  \set Score.currentBarNumber = 212
+  %\set Score.currentBarNumber = 212
 }
 
 
@@ -65,7 +66,7 @@ sopranNotenBenedictusGounodDVE = \tempTranspose \relative c'' {
   a2 ^\p f4( bes4) | % 217
   a4 ( g ) a8 r8 bes4 ^\crescMarkup | % 218
   c4( cis4) d4 c8 [ ^\dimMarkup bes8 ] | % 219
-  a4.. ^\p a16 g4 g \mBreak | \barNumberCheck #220
+  a4.. ^\p a16 g4 g \mBreak | \barNumberCheck #(- 220 taktkorrektur-benedictus-gounoddve)
   g2 a4 a | % 221
   a4.. a16 bes4 r4 | % 222
   bes4 ^\crescMarkup bes4 c4 c8 c8 | % 223
@@ -75,7 +76,7 @@ sopranNotenBenedictusGounodDVE = \tempTranspose \relative c'' {
   a4 ^\p a4 bes4 bes8 ^\crescMarkup bes8 | % 227
   b2 c8 r8 c4 \mBreak | % 228
   cis2 ^\f d4 d | % 229
-  a4 ^\p a8 a g4.. g16 | \barNumberCheck #230
+  a4 ^\p a8 a g4.. g16 | \barNumberCheck #(- 230 taktkorrektur-benedictus-gounoddve)
   f2. r4 | % 231
   a4 ^\p a^\< a4 a8 a | % 232
   c2 ( -\! ^\> bes2 ) \mBreak | % 233
@@ -99,7 +100,7 @@ altNotenBenedictusGounodDVE = \tempTranspose \relative c' {
   f2 d4( g4) | % 217
   f4 ( e ) f8 r8 g4 ^\crescMarkup | % 218
   a2 bes4 a8 [ ^\dimMarkup g8 ] | % 219
-  f4.. ^\p f16 e4 e4 \mBreak | \barNumberCheck #220
+  f4.. ^\p f16 e4 e4 \mBreak | \barNumberCheck #(- 220 taktkorrektur-benedictus-gounoddve)
   e2 fis4 fis | % 221
   fis4.. fis16 g4 r4 | % 222
   g4 ^\crescMarkup g4 a4 a8 a8 | % 223
@@ -109,7 +110,7 @@ altNotenBenedictusGounodDVE = \tempTranspose \relative c' {
   f4 ^\p f4 g4 g8 ^\crescMarkup g8 | % 227
   gis2 a8 r8 a4 \mBreak | % 228
   a2 ^\f bes4 bes | % 229
-  f4 ^\p f8 f e4.. e16 | \barNumberCheck #230
+  f4 ^\p f8 f e4.. e16 | \barNumberCheck #(- 230 taktkorrektur-benedictus-gounoddve)
   f2. r4 | % 231
   f4 ^\p f ^\< f4 f8 f | % 232
   a2 ( -\! ^\> g ) -\! \mBreak | % 233

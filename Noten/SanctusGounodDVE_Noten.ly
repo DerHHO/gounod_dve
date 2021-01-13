@@ -27,10 +27,10 @@ globalSanctusGounodDVE = {
   \tempo "Andante"
   \key c\major
   \time 4/4
-  \set Score.currentBarNumber = 177
+  %\set Score.currentBarNumber = 177
 }
 
-
+#(define taktkorrektur-sanctus-gounoddve 176)
 
 vorspielpausenSanctusGounodDVE = {
 
@@ -44,12 +44,15 @@ hosannaTextSanctusGounodDVE = \lyricmode {
 }
 
 sopranTextSanctusGounodDVE = \lyricmode {
-  San -- ctus, San -- ctus, San -- ctus Do -- mi -- nus
+  San -- ctus, San -- ctus, 
+  San -- ctus Do -- mi -- nus
   De -- us Sa -- ba -- oth,
   San -- ctus, San -- ctus, San -- ctus
   Do -- mi -- nus De -- us Sa -- ba -- oth.
-  Ple -- ni sunt cœ -- li -- et ter -- ra glo -- ri -- a tu -- a,
-  ple -- ni sunt cœ -- li -- et ter -- ra glo -- ri -- a tu -- a.
+  Ple -- ni sunt cœ -- li -- et ter -- ra
+  glo -- ri -- a tu -- a,
+  ple -- ni sunt cœ -- li -- et ter -- ra 
+  glo -- ri -- a tu -- a.
   \hosannaTextSanctusGounodDVE
 }
 
@@ -83,7 +86,7 @@ sopranNotenSanctusGounodDVE = \tempTranspose \relative g' {
   \globalSanctusGounodDVE
   R1
   g2^\f g4 r4 | % 179
-  c2 c4 r4 | \barNumberCheck #180
+  c2 c4 r4 | \barNumberCheck #(- 180 taktkorrektur-sanctus-gounoddve)
   e2 d2 | % 181
   c4.. c16 c2 | % 182
   a2 d2 | % 183
@@ -93,7 +96,7 @@ sopranNotenSanctusGounodDVE = \tempTranspose \relative g' {
   c2 c4 r4 | % 187
   e2 d2 | % 188
   c4.. c16 c2 | % 189
-  b2 c2 | \barNumberCheck #190
+  b2 c2 | \barNumberCheck #(- 190 taktkorrektur-sanctus-gounoddve)
   b2 ( a4.. ) a16 \mPageBreak | % 191
   g2. r4 | % 192
   g2 ^\f g4 g4 | % 193
@@ -103,7 +106,7 @@ sopranNotenSanctusGounodDVE = \tempTranspose \relative g' {
   c2 b4 r4 | % 197
   b2 b4 b4 \mBreak | % 198
   c2 c4 c4 | % 199
-  d2 d2 | \barNumberCheck #200
+  d2 d2 | \barNumberCheck #(- 200 taktkorrektur-sanctus-gounoddve)
   e4.. e16 e2 | % 201
   e2 d4 r8.
   \sopranHosannaSanctusGounodDVE
@@ -127,7 +130,7 @@ altNotenSanctusGounodDVE = \tempTranspose \relative c' {
   \globalSanctusGounodDVE
   R1 | % 178
   e2 ^\f e4 r4 | % 179
-  e2 e4 r4 | \barNumberCheck #180
+  e2 e4 r4 | \barNumberCheck #(- 180 taktkorrektur-sanctus-gounoddve)
   g2 f2 | % 181
   e4.. e16 e2 | % 182
   f2 f2 | % 183
@@ -137,13 +140,13 @@ altNotenSanctusGounodDVE = \tempTranspose \relative c' {
   e2 e4 r4 | % 187
   g2 f2 | % 188
   e4.. e16 fis2 | % 189
-  g2 a2 | \barNumberCheck #190
+  g2 a2 | \barNumberCheck #(- 190 taktkorrektur-sanctus-gounoddve)
   g2 ( fis4.. ) fis16 \mPageBreak | % 191
   g2. r4 | % 192
   R1*5 | % 197
   g2 ^\f g4 g4 \mBreak | % 198
   a2 a4 a4 | % 199
-  b2 b2 | \barNumberCheck #200
+  b2 b2 | \barNumberCheck #(- 200 taktkorrektur-sanctus-gounoddve)
   c4.. c16 c2 | % 201
   c2 b4 r8.
   \altHosannaSanctusGounodDVE
@@ -171,7 +174,7 @@ orgelRHOSanctusGounodDVE = \relative g' {
   \globalSanctusGounodDVE
   <e g c>2. _\f r4 | % 178
   <e g>1 | % 179
-  <e c'>1 | \barNumberCheck #180
+  <e c'>1 | \barNumberCheck #(- 180 taktkorrektur-sanctus-gounoddve)
   <g e'>2 <f d'>2 | % 181
   <e c'>2 <e c'>2 | % 182
   <f a>2 <f d'>2 | % 183
@@ -181,7 +184,7 @@ orgelRHOSanctusGounodDVE = \relative g' {
   <e c'>1 | % 187
   <g e'>2 <f d'>2 | % 188
   <e c'>2 <fis c'>2 | % 189
-  <g b>2 <e a c>2 | \barNumberCheck #190
+  <g b>2 <e a c>2 | \barNumberCheck #(- 190 taktkorrektur-sanctus-gounoddve)
   <g b>2 <fis a>2 \mPageBreak | % 191
   <d g>2. r4 | % 192
   <d g>1 | % 193
@@ -191,7 +194,7 @@ orgelRHOSanctusGounodDVE = \relative g' {
   c2 b2 | % 197
   b1 \mBreak | % 198
   <a c>1 | % 199
-  <b d>1 | \barNumberCheck #200
+  <b d>1 | \barNumberCheck #(- 200 taktkorrektur-sanctus-gounoddve)
   <c e>1 ~ ~ | % 201
   <c e>2 <b d>4 r4 | % 202
   \orgelRHOHosannaGounodDVE

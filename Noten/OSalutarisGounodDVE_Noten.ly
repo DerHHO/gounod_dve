@@ -18,13 +18,14 @@ tempTranspose = #(define-music-function (parser location music)
                           (to (ly:make-pitch octave note alteration)))
                      #{ \transpose c c  $music #}))
 
+#(define taktkorrektur-osalutaris-gounoddve 211)
 
 globalOSalutarisGounodDVE = {
   \taktstil
   \accidentalStyle modern-voice
   \key f \major \time 4/4 | % 212
   \tempo "Adagio"
-  \set Score.currentBarNumber = 212
+  %\set Score.currentBarNumber = 212
 }
 
 ablaufzeileOSalutarisGounodDVE = {
@@ -34,24 +35,33 @@ ablaufzeileOSalutarisGounodDVE = {
 }
 
 sopranTextOSalutarisGounodDVE = \lyricmode {
-  O sa -- lu -- ta -- ris hos
-  -- ti -- "a," quae cœ -- li pan -- dis os -- ti --
-  "um," bel -- la pre -- munt hos -- ti -- li -- "a," bel -- la pre --
-  munt hos -- ti -- li -- "a," da ro -- "bur,"  fer au -- xi --
-  li -- "um," bel -- la pre -- munt hos -- ti -- li -- "a," da ro --
-  "bur," fer au -- xi -- li -- "um." O sa -- lu -- ta -- ris hos
-  -- ti -- "a," o sa -- lu -- ta -- ris hos -- ti -- "a."
+  O sa -- lu -- ta -- ris hos -- ti -- a, 
+  quæ cœ -- li -- an -- dis 
+  o -- sti -- um, 
+  bel -- la pre -- munt hos -- ti -- li -- a, 
+  bel -- la pre -- munt hos -- ti -- li -- a, 
+  da ro -- bur, 
+  fer au -- xi -- li -- um, 
+  bel -- la pre -- munt hos -- ti -- li -- a, 
+  da ro -- bur, 
+  fer au -- xi -- li -- um. 
+  O sa -- lu -- ta -- ris hos -- ti -- a, 
+  o sa -- lu -- ta -- ris hos -- ti -- a.
 }
 
 altTextOSalutarisGounodDVE = \lyricmode {
-  O sa -- lu -- ta -- ris hos --
-  ti -- "a," o sa -- lu -- ta -- ris hos -- ti -- "a," quae cœ
-  -- li pan -- dis os -- ti -- "um," bel -- la pre -- munt hos
-  -- ti -- li -- "a," bel -- la pre -- munt hos -- ti -- li -- "a," da
-  ro -- "bur,"  fer au -- xi -- li -- "um," bel -- la pre --
-  munt hos -- ti -- li -- "a," da ro -- "bur," fer au -- xi -- li --
-  "um." O sa -- lu -- ta -- ris hos -- ti -- "a," o sa -- lu --
-  ta -- ris hos -- ti -- "a."
+  O sa -- lu -- ta -- ris hos -- ti -- a, 
+  o sa -- lu -- ta -- ris hos -- ti -- a, 
+  quæ cœ -- li -- an -- dis os -- ti -- um, 
+  bel -- la pre -- munt hos -- ti -- li -- a, 
+  bel -- la pre -- munt hos -- ti -- li -- a, 
+  da ro -- bur, 
+  fer au -- xi -- li -- um, 
+  bel -- la pre -- munt hos -- ti -- li -- a, 
+  da ro -- bur, 
+  fer au -- xi -- li -- um. 
+  O sa -- lu -- ta -- ris hos -- ti -- a, 
+  o sa -- lu -- ta -- ris hos -- ti -- a.
 }
 
 sopranNotenOSalutarisGounodDVE = \tempTranspose \relative c'' {
@@ -61,7 +71,7 @@ sopranNotenOSalutarisGounodDVE = \tempTranspose \relative c'' {
   a4 ^\p a8 a8 f4 bes4 | % 217
   a4 ( g8. ) g16 a8 r8 bes4 ^\crescMarkup | % 218
   c4 cis4 d4 c8 [ ^\dimMarkup bes8 ] | % 219
-  a4.. ^\p a16 g4 r4 \mBreak | \barNumberCheck #220
+  a4.. ^\p a16 g4 r4 \mBreak | \barNumberCheck #(- 220 taktkorrektur-osalutaris-gounoddve)
   g4 g4 a4 a8 a8 | % 221
   a4.. a16 bes4 r4 | % 222
   bes4 ^\crescMarkup bes4 c4 c8 c8 | % 223
@@ -71,7 +81,7 @@ sopranNotenOSalutarisGounodDVE = \tempTranspose \relative c'' {
   a4 ^\p a4 bes4 bes8 ^\crescMarkup bes8 | % 227
   b4.. b16 c8 r8 c4 \mBreak | % 228
   cis2 ^\f d4 r4 | % 229
-  a4 ^\p a4 g4.. g16 | \barNumberCheck #230
+  a4 ^\p a4 g4.. g16 | \barNumberCheck #(- 230 taktkorrektur-osalutaris-gounoddve)
   f2. r4 | % 231
   a4 ^\p a8 ^\< a8 a4 a4 | % 232
   c2 ( -\! ^\> bes4.. ) bes16 \mBreak | % 233
@@ -93,7 +103,7 @@ altNotenOSalutarisGounodDVE = \tempTranspose \relative c' {
   f4 f8 f8 d4 g4 | % 217
   f4 ( e8. ) e16 f8 r8 g4 ^\crescMarkup | % 218
   a4 a4 bes4 a8 [ ^\dimMarkup g8 ] | % 219
-  f4.. ^\p f16 e4 r4 \mBreak | \barNumberCheck #220
+  f4.. ^\p f16 e4 r4 \mBreak | \barNumberCheck #(- 220 taktkorrektur-osalutaris-gounoddve)
   e4 e4 fis4 fis8 fis8 | % 221
   fis4.. fis16 g4 r4 | % 222
   g4 ^\crescMarkup g4 a4 a8 a8 | % 223
@@ -103,7 +113,7 @@ altNotenOSalutarisGounodDVE = \tempTranspose \relative c' {
   f4 ^\p f4 g4 g8 ^\crescMarkup g8 | % 227
   gis4.. gis16 a8 r8 a4 \mBreak | % 228
   a2 ^\f bes4 r4 | % 229
-  f4 ^\p f4 e4.. e16 | \barNumberCheck #230
+  f4 ^\p f4 e4.. e16 | \barNumberCheck #(- 230 taktkorrektur-osalutaris-gounoddve)
   f2. r4 | % 231
   f4 ^\p f8 ^\< f8 f4 f4 | % 232
   a2 ( -\! ^\> g4.. ) g16 -\! \mBreak | % 233
@@ -118,15 +128,15 @@ orgelRHOOSalutarisGounodDVE = \relative f' {
   \globalOSalutarisGounodDVE
   \voiceOne
   a2 _\p g8 [ a8 bes8 d8 ] | % 213
-  f,4 e4 f4. b8 \rest | % 214
-  c,4 cis4 d4 g4 | % 215
+  f,4 e4 f4. r8 | % 214
+  c4 cis4 d4 g4 | % 215
   f4 e4 f8 [ a,8 c8 f8 ] \mBreak | % 216
   a2 <d, f>4 <g bes>4 | % 217
   <f a>4 <e g>4 <f a>4 <g bes>4_\crescMarkup |
   c4 cis4 <bes d>4 <a c>8 [ _\dimMarkup <g
   bes>8 ] | % 219
   \oneVoice
-  <f a>2 _\p <e g>4 r4 \mBreak | \barNumberCheck #220
+  <f a>2 _\p <e g>4 r4 \mBreak | \barNumberCheck #(- 220 taktkorrektur-osalutaris-gounoddve)
   <e g>2 <d fis a>2 ~ ~ ~ | % 221
   <d fis a>2 ~ <d g bes>4 r4 | % 222
   <g bes>2 _\crescMarkup <f a c>2 ~ ~ ~ | % 223
@@ -138,8 +148,8 @@ orgelRHOOSalutarisGounodDVE = \relative f' {
   <f a>2 _\p <g bes>2 _\crescMarkup | % 227
   \voiceOne
   <gis b>2 <a c>2 ~ \mBreak | % 228
-  <a cis>2 _\f <bes d>4 b4 \rest | % 229
-  <f a>2 _\p <e g>2 | \barNumberCheck #230
+  <a cis>2 _\f <bes d>4 r4 | % 229
+  <f a>2 _\p <e g>2 | \barNumberCheck #(- 230 taktkorrektur-osalutaris-gounoddve)
   f2. r4 | % 231
   \oneVoice 
   <f a>1 ~ _\p | % 232
@@ -155,7 +165,8 @@ orgelRHOOSalutarisGounodDVE = \relative f' {
 orgelRHUOSalutarisGounodDVE = \relative f' {
   \globalOSalutarisGounodDVE
   \voiceTwo
-  c4 cis4 d2 c2 ~ c4. b'8 \rest s2 d,2 c2 ~ c8
+  c4 cis4 d2 c2 ~ c4. r8 |
+  s2 d2 c2 ~ c8
   s4. \mBreak c4 cis4 s1. a'2 s2 s1 |
   \mBreak s1*4 \mPageBreak e2 s2*5 f1 ~
   \mBreak
@@ -180,17 +191,21 @@ orgelRHNotenOSalutarisGounodDVE = \tempTranspose \relative c' {
 orgelLHOOSalutarisGounodDVE = \relative g {
   \globalOSalutarisGounodDVE
   \voiceOne
-  a2 bes4 g4 a4 <g bes>4 a4. d,8 \rest a'2 f4
-  bes4 a4 g4 a8 d,8 \rest d4 \rest \mBreak 
+  a2 bes4 g4 |
+  a4 <g bes>4 a4. r8 |
+  a2 f4 bes4 |
+  a4 g4 a8 r8 r4 | \mBreak 
   \oneVoice
   <f a>2 <bes, bes'>4 <bes' d>4
   \voiceOne 
   c2 ~ c4 r4 |
   f2. d4 |
   \oneVoice
-  c4 b4 c8 [ c,8 e8 g8 ] \mBreak c2 ~ <a c>2
-  ~ <g c>2 ~ <g bes>8 [ g8 bes8 d8 ] es2 ~ <c es>2 ~ <bes es>2 ~ <bes
-  d>8 r8 <bes, bes'>4 \mPageBreak 
+  c4 b4 c8 [ c,8 e8 g8 ] | \mBreak 
+  c2 ~ <a c>2~ |
+  <g c>2 ~ <g bes>8 [ g8 bes8 d8 ] |
+  es2 ~ <c es>2 ~ |
+  <bes es>2 ~ <bes d>8 r8 <bes, bes'>4 | \mPageBreak 
   <c c'>2 <d d'>4 <bes bes'>4 |
   \voiceOne
   c'4 b4 c4 r4 

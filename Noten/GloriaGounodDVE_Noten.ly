@@ -18,11 +18,12 @@ tempTranspose = #(define-music-function (parser location music)
                           (to (ly:make-pitch octave note alteration)))
                      #{ \transpose c c  $music #}))
 
+#(define taktkorrektur-gloria-gounoddve 62)
 
 globalGloriaGounodDVE = {
   \taktstil
   \accidentalStyle modern-voice
-  \set Score.currentBarNumber = 63
+  %\set Score.currentBarNumber = 63
   \key c\major
   \time 4/4
   \tempo "Allegro"
@@ -122,7 +123,7 @@ sopranNotenGloriaGounodDVE = \tempTranspose \relative c'' {
   c2 ( d2 ) | % 67
   c2. r4 | % 68
   c4.. c16 c2 | % 69
-  c4 b4 a4 g4 \mBreak | \barNumberCheck #70
+  c4 b4 a4 g4 \mBreak | \barNumberCheck #(- 70 taktkorrektur-gloria-gounoddve)
   c2 ( a2 ) | % 71
   g2. r4 | % 72
   g2 ^\p a4 ( b4 ) | % 73
@@ -132,7 +133,7 @@ sopranNotenGloriaGounodDVE = \tempTranspose \relative c'' {
   e'2 c2 \mPageBreak | % 77
   a4 ( b4 ) c4 ( d4 ) | % 78
   c2 ( b2 ) | % 79
-  c2 r4 g4 ^\f | \barNumberCheck #80
+  c2 r4 g4 ^\f | \barNumberCheck #(- 80 taktkorrektur-gloria-gounoddve)
   e'2 d2 | % 81
   c4 r4 g4 c4 | % 82
   b4 ( c4 ) d4 b4 | % 83
@@ -142,7 +143,7 @@ sopranNotenGloriaGounodDVE = \tempTranspose \relative c'' {
   b2 a2 | % 87
   g2. r4 | % 88
   c4. c8 b2 | % 89
-  a4. a8 g4 r4 | \barNumberCheck #90
+  a4. a8 g4 r4 | \barNumberCheck #(- 90 taktkorrektur-gloria-gounoddve)
   c4. c8 b2 \mBreak | % 91
   a2 g4 r4 | % 92
   g4 c4 d4 e4 | % 93
@@ -152,7 +153,7 @@ sopranNotenGloriaGounodDVE = \tempTranspose \relative c'' {
   c4.. c16 c2 \mPageBreak | % 97
   d2 c4 r4 | % 98
   c2. c4 | % 99
-  d2 c4 r4 | \barNumberCheck #100
+  d2 c4 r4 | \barNumberCheck #(- 100 taktkorrektur-gloria-gounoddve)
   c2 c2 | % 101
   a2 a4 a4 | % 102
   a2. a4 | % 103
@@ -165,7 +166,7 @@ sopranNotenGloriaGounodDVE = \tempTranspose \relative c'' {
   d2 c4 r4 | % 107
   c4 ( a4 ) g4 ( bes4 ) | % 108
   bes4. bes8 a4 r4 | % 109
-  g4 ( a4 ) bes4 ( g4 ) | \barNumberCheck #110
+  g4 ( a4 ) bes4 ( g4 ) | \barNumberCheck #(- 110 taktkorrektur-gloria-gounoddve)
   d'2 c4 r4 \mBreak | % 111
   f,4 ( g4 ) a4 ( bes4 ) | % 112
   a2 g4 r4 | % 113
@@ -175,7 +176,7 @@ sopranNotenGloriaGounodDVE = \tempTranspose \relative c'' {
   bes2 a4 r4 | % 117
   a4 a4 a4 a4 | % 118
   bes4 ( d4 ) c4 bes4 | % 119
-  a2 ( g2 ) | \barNumberCheck #120
+  a2 ( g2 ) | \barNumberCheck #(- 120 taktkorrektur-gloria-gounoddve)
   f2 r4 a4 | % 121
   a2 f4 d'4 \mBreak | % 122
   c2 bes4 bes4 | % 123
@@ -184,7 +185,7 @@ sopranNotenGloriaGounodDVE = \tempTranspose \relative c'' {
   R1*2 | % 127
   cis'4 cis4 cis4 cis4 \mBreak | % 128
   d2 cis4 a4 | % 129
-  a2 f4 d'4 | \barNumberCheck #130
+  a2 f4 d'4 | \barNumberCheck #(- 130 taktkorrektur-gloria-gounoddve)
   c2 bes4 bes4 | % 131
   e4 ( d4 ) c4 ( bes4 ) | % 132
   bes2 a4 r4 | % 133
@@ -194,7 +195,7 @@ sopranNotenGloriaGounodDVE = \tempTranspose \relative c'' {
   a2 r4 a4 | % 137
   d2 d4 d4 | % 138
   bes2 bes4 bes4 | % 139
-  c4.. c16 c2 \mBreak | \barNumberCheck #140
+  c4.. c16 c2 \mBreak | \barNumberCheck #(- 140 taktkorrektur-gloria-gounoddve)
   d2 d4 r4 | % 141
   g,4 a4 bes4 c4 | % 142
   bes2 a4 r4 | % 143
@@ -206,7 +207,7 @@ sopranNotenGloriaGounodDVE = \tempTranspose \relative c'' {
   c4.. ^\f c16 c2 | % 147
   c4 ( b4 ) a4 g4 | % 148
   c2( d2) | % 149
-  c2. r4 | \barNumberCheck #150
+  c2. r4 | \barNumberCheck #(- 150 taktkorrektur-gloria-gounoddve)
   c4 ( b4 ) a4 g4 | % 151
   c4.. c16 c4 c4 \mPageBreak | % 152
   a2 a4 a4 | % 153
@@ -216,7 +217,7 @@ sopranNotenGloriaGounodDVE = \tempTranspose \relative c'' {
   g2 r4 g4 | % 157
   a4 ( b4 ) c4( d4) \mBreak | % 158
   e4.. c16 c4 g4 | % 159
-  a4 ( b4 ) c4 d4 | \barNumberCheck #160
+  a4 ( b4 ) c4 d4 | \barNumberCheck #(- 160 taktkorrektur-gloria-gounoddve)
   e2 c4 g4 | % 161
   a4 ( b4 ) c4 d4 | % 162
   e2 d2 | % 163
@@ -226,7 +227,7 @@ sopranNotenGloriaGounodDVE = \tempTranspose \relative c'' {
   e4.. c16 c4 g4 | % 167
   a4 ( b4 ) c4 ( d4 ) | % 168
   e4.. c16 c4 g4 \mPageBreak | % 169
-  a4 ( b4 ) c4 d4 | \barNumberCheck #170
+  a4 ( b4 ) c4 d4 | \barNumberCheck #(- 170 taktkorrektur-gloria-gounoddve)
   e2 d2 | % 171
   c2 ( b2 ) | % 172
   c2. r4 | % 173
@@ -247,7 +248,7 @@ altNotenGloriaGounodDVE = \tempTranspose \relative c' {
   a2 ( b2 ) | % 67
   c2. r4 | % 68
   c4.. c16 c2 | % 69
-  c4 b4 a4 g4 \mBreak | \barNumberCheck #70
+  c4 b4 a4 g4 \mBreak | \barNumberCheck #(- 70 taktkorrektur-gloria-gounoddve)
   a2 ( fis2 ) | % 71
   g2. r4 | % 72
   g2 ^\p f2 | % 73
@@ -257,7 +258,7 @@ altNotenGloriaGounodDVE = \tempTranspose \relative c' {
   g2 e2 \mPageBreak | % 77
   c4 ( d4 ) e4 ( f4 ) | % 78
   e2 ( d2 ) | % 79
-  e2 r4 g4 ^\f | \barNumberCheck #80
+  e2 r4 g4 ^\f | \barNumberCheck #(- 80 taktkorrektur-gloria-gounoddve)
   g2 f2 | % 81
   e4 r4 g4 e4 | % 82
   d4 ( e4 ) f4 g4 | % 83
@@ -267,7 +268,7 @@ altNotenGloriaGounodDVE = \tempTranspose \relative c' {
   g2 fis2 | % 87
   g2. r4 | % 88
   e4. e8 g2 | % 89
-  f4. f8 e4 r4 | \barNumberCheck #90
+  f4. f8 e4 r4 | \barNumberCheck #(- 90 taktkorrektur-gloria-gounoddve)
   e4. e8 g2 \mBreak | % 91
   f2 e4 r4 | % 92
   e4 e4 f4 g4 | % 93
@@ -277,7 +278,7 @@ altNotenGloriaGounodDVE = \tempTranspose \relative c' {
   c'4.. c16 c2 \mPageBreak | % 97
   b2 c4 r4 | % 98
   c2. c4 | % 99
-  b2 c4 r4 | \barNumberCheck #100
+  b2 c4 r4 | \barNumberCheck #(- 100 taktkorrektur-gloria-gounoddve)
   c2 c2 | % 101
   f,2 f4 f4 | % 102
   f2. f4 | % 103
@@ -289,7 +290,7 @@ altNotenGloriaGounodDVE = \tempTranspose \relative c' {
   bes2 a4 r4 | % 107
   a4 ( f4 ) e4 ( g4 ) | % 108
   g4. g8 f4 r4 | % 109
-  e4 ( f4 ) g4 ( e4 ) | \barNumberCheck #110
+  e4 ( f4 ) g4 ( e4 ) | \barNumberCheck #(- 110 taktkorrektur-gloria-gounoddve)
   bes'2 a4 r4 \mBreak | % 111
   d,4 ( e4 ) f4 ( g4 ) | % 112
   f2 e4 r4 | % 113
@@ -299,7 +300,7 @@ altNotenGloriaGounodDVE = \tempTranspose \relative c' {
   g2 f4 r4 | % 117
   fis4 fis4 fis4 fis4 | % 118
   g4 ( bes4 ) a4 g4 | % 119
-  f2 ( e2 ) | \barNumberCheck #120
+  f2 ( e2 ) | \barNumberCheck #(- 120 taktkorrektur-gloria-gounoddve)
   f2 r4 f4 | % 121
   f2 d4 f4 \mBreak | % 122
   a2 g4 g4 | % 123
@@ -309,7 +310,7 @@ altNotenGloriaGounodDVE = \tempTranspose \relative c' {
   bes2 a4 r4 | % 127
   a4 a4 a4 a4 \mBreak | % 128
   bes2 a4 a4 | % 129
-  f2 d4 f4 | \barNumberCheck #130
+  f2 d4 f4 | \barNumberCheck #(- 130 taktkorrektur-gloria-gounoddve)
   a2 g4 g4 | % 131
   c4 ( bes4 ) a4 ( g4 ) | % 132
   g2 f4 r4 | % 133
@@ -319,7 +320,7 @@ altNotenGloriaGounodDVE = \tempTranspose \relative c' {
   a2 r4 a4 | % 137
   fis2 fis4 fis4 | % 138
   g2 g4 g4 | % 139
-  a4.. a16 a2 \mBreak | \barNumberCheck #140
+  a4.. a16 a2 \mBreak | \barNumberCheck #(- 140 taktkorrektur-gloria-gounoddve)
   bes2 bes4 r4 | % 141
   e,4 f4 g4 e4 | % 142
   g2 f4 r4 | % 143
@@ -331,7 +332,7 @@ altNotenGloriaGounodDVE = \tempTranspose \relative c' {
   c4.. ^\f c16 c2 | % 147
   c4 ( b4 ) a4 g4 | % 148
   a2( b2) | % 149
-  c2. r4 | \barNumberCheck #150
+  c2. r4 | \barNumberCheck #(- 150 taktkorrektur-gloria-gounoddve)
   c4 ( b4 ) a4 g4 | % 151
   a4.. a16 a4 a4 \mPageBreak | % 152
   fis2 fis4 fis4 | % 153
@@ -341,7 +342,7 @@ altNotenGloriaGounodDVE = \tempTranspose \relative c' {
   g2 r4 e4 | % 157
   f4 ( g4 ) a4 ( b4 ) \mBreak | % 158
   c4.. c16 c4 e,4 | % 159
-  f4 ( g4 ) a4 b4 | \barNumberCheck #160
+  f4 ( g4 ) a4 b4 | \barNumberCheck #(- 160 taktkorrektur-gloria-gounoddve)
   c2 c4 e,4 | % 161
   f4 ( g4 ) a4 b4 | % 162
   c2 f,2 | % 163
@@ -351,7 +352,7 @@ altNotenGloriaGounodDVE = \tempTranspose \relative c' {
   c4.. c16 c4 e,4 | % 167
   f4 ( g4 ) a4 ( b4 ) | % 168
   c4.. c16 c4 e,4 \mPageBreak | % 169
-  f4 ( g4 ) a4 b4 | \barNumberCheck #170
+  f4 ( g4 ) a4 b4 | \barNumberCheck #(- 170 taktkorrektur-gloria-gounoddve)
   c2 f,2 | % 171
   e2 ( d2 ) | % 172
   e2. r4 | % 173
@@ -370,7 +371,7 @@ orgelRHOGloriaGounodDVE = \relative g' {
   <e a c>2 <f g b d>2 | % 67
   <e g c>1 | % 68
   <g c>2 <g c>2 | % 69
-  <g c>4 <g b>4 <e a>4 <d g>4 \mBreak | \barNumberCheck #70
+  <g c>4 <g b>4 <e a>4 <d g>4 \mBreak | \barNumberCheck #(- 70 taktkorrektur-gloria-gounoddve)
   <e a c>2 <d fis a>2 | % 71
   <d g>4 g4 g4 g4 | % 72
   g2 _\p a4 b4 | % 73
@@ -380,7 +381,7 @@ orgelRHOGloriaGounodDVE = \relative g' {
   <g e'>2 <e c'>2 \mPageBreak | % 77
   <c a'>4 <d b'>4 <e c'>4 <f d'>4 | % 78
   <e g c>2 <d f b>2 | % 79
-  <c e c'>2. g'4 _\f | \barNumberCheck #80
+  <c e c'>2. g'4 _\f | \barNumberCheck #(- 80 taktkorrektur-gloria-gounoddve)
   <g c e>2 <f b d>2 | % 81
   <e c'>4 r4 g4 <e c'>4 | % 82
   <d b'>4 <e c'>4 <f d'>4 <d b'>4 | % 83
@@ -390,7 +391,7 @@ orgelRHOGloriaGounodDVE = \relative g' {
   <g b>2 <fis a>2 | % 87
   <d g>4 <d g>4 <e a>4 <f b>4 | % 88
   <e c'>2 <g b>2 | % 89
-  <f a>2 <e g>2 | \barNumberCheck #90
+  <f a>2 <e g>2 | \barNumberCheck #(- 90 taktkorrektur-gloria-gounoddve)
   <e c'>2 <g b>2 \mBreak | % 91
   <f a>2 <e g>2 | % 92
   <e c'>2 <f d'>4 <g e'>4 | % 93
@@ -400,7 +401,7 @@ orgelRHOGloriaGounodDVE = \relative g' {
   <f a c>2 <e g c>2 \mPageBreak | % 97
   <d f g b>2 <e g c>2 | % 98
   <f a c>2 <e g c>2 | % 99
-  <d f g b>2 <e g c>2 | \barNumberCheck #100
+  <d f g b>2 <e g c>2 | \barNumberCheck #(- 100 taktkorrektur-gloria-gounoddve)
   <c c'>2 <c c'>2 | % 101
   <c f a>1 ~ ~ ~ | % 102
   <c f a>2 <c d f a>2 | % 103
@@ -412,7 +413,7 @@ orgelRHOGloriaGounodDVE = \relative g' {
   <bes d>2 <a c>4 r4 | % 107
   c4 a4 g4 bes4 | % 108
   <g bes>2 <f a>4 r4 | % 109
-  <e g>4 <f a>4 <g bes>4 <e g>4 | \barNumberCheck #110
+  <e g>4 <f a>4 <g bes>4 <e g>4 | \barNumberCheck #(- 110 taktkorrektur-gloria-gounoddve)
   <bes' d>2 <a c>4 r4 \mBreak | % 111
   <d, f>4 <e g>4 <f a>4 <g bes>4 | % 112
   <f a>2 <e g>4 r4 | % 113
@@ -424,7 +425,7 @@ orgelRHOGloriaGounodDVE = \relative g' {
   <g bes>2 <f a>4 r4 | % 117
   <fis a>4 <fis a>4 <fis a>4 <fis a>4 | % 118
   <g bes>4 <bes d>4 <a c>4 <g bes>4 | % 119
-  <f a>2 <c e g>2 | \barNumberCheck #120
+  <f a>2 <c e g>2 | \barNumberCheck #(- 120 taktkorrektur-gloria-gounoddve)
   <c f>2. <f a>4 | % 121
   <f a>2 <d f>4 <f d'>4 \mBreak | % 122
   <a c>2 <g bes>4 <g bes>4 ~ ~ | % 123
@@ -434,7 +435,7 @@ orgelRHOGloriaGounodDVE = \relative g' {
   <f bes>2 <e a>4 r4 | % 127
   <e a cis>4 <e a cis>4 <e a cis>4 <e a cis>4 \mBreak | % 128
   <f bes d>2 <e a cis>4 r4 | % 129
-  <f a>2 <d f>4 <f d'>4 | \barNumberCheck #130
+  <f a>2 <d f>4 <f d'>4 | \barNumberCheck #(- 130 taktkorrektur-gloria-gounoddve)
   <a c>2 <g bes>4 <g bes>4 | % 131
   <c e>4 <bes d>4 <a c>4 <g bes>4 | % 132
   <g bes>2 <f a>4 r4 | % 133
@@ -456,7 +457,7 @@ orgelRHOGloriaGounodDVE = \relative g' {
   \oneVoice
   <d fis d'>1 | % 138
   <d g bes>1 | % 139
-  <f a c>1 \mBreak | \barNumberCheck #140
+  <f a c>1 \mBreak | \barNumberCheck #(- 140 taktkorrektur-gloria-gounoddve)
   <d f bes d>2. r4 | % 141
   <e g>4 <f a>4 <g bes>4 <e c'>4 | % 142
   <e g bes>2 <f a>4 r4 | % 143
@@ -468,7 +469,7 @@ orgelRHOGloriaGounodDVE = \relative g' {
   <e g c>2 _\f <e g c>2 | % 147
   <g c>4 <g b>4 <e a>4 <e g>4 | % 148
   <e a c>2 <f b d>2 | % 149
-  <e c'>2. r4 | \barNumberCheck #150
+  <e c'>2. r4 | \barNumberCheck #(- 150 taktkorrektur-gloria-gounoddve)
   <g c>4 <g b>4 <e a>4 <d g>4 | % 151
   <e a c>2. <e a c>4 \mPageBreak | % 152
   <fis a>2. <fis a>4 | % 153
@@ -478,7 +479,7 @@ orgelRHOGloriaGounodDVE = \relative g' {
   <d g>2. <e g>4 | % 157
   <f a>4 <g b>4 <a c>4 <b d>4 \mBreak | % 158
   <e, c' e>2. <e g>4 | % 159
-  <f a>4 <g b>4 <a c>4 <b d>4 | \barNumberCheck #160
+  <f a>4 <g b>4 <a c>4 <b d>4 | \barNumberCheck #(- 160 taktkorrektur-gloria-gounoddve)
   <e, c' e>2. <e g>4 | % 161
   <f a>4 <g b>4 <a c>4 <b d>4 | % 162
   <c e>2 <f, a d>2 | % 163
@@ -488,7 +489,7 @@ orgelRHOGloriaGounodDVE = \relative g' {
   <e, c' e>2. <e g>4 | % 167
   <f a>4 <g b>4 <a c>4 <b d>4 | % 168
   <e, c' e>2. <e g>4 \mPageBreak | % 169
-  <f a>4 <g b>4 <a c>4 <b d>4 | \barNumberCheck #170
+  <f a>4 <g b>4 <a c>4 <b d>4 | \barNumberCheck #(- 170 taktkorrektur-gloria-gounoddve)
   <c e>2 <f, a d>2 | % 171
   <e g c>2 <d f g b>2 | % 172
   <e c' e>2. r4 | % 173
@@ -497,117 +498,11 @@ orgelRHOGloriaGounodDVE = \relative g' {
   <d f g b>1 | % 176
   <c e g c>1 \bar "|."
   \mBreak | % 177
-  %{\key f \major | % 105
-  <a c>4.. _\p <g bes>16 <f a>2 | % 106
-  <bes d>2 <a c>4 r4 | % 107
-  c4 a4 g4 bes4 | % 108
-  <g bes>2 <f a>4 r4 | % 109
-  <e g>4 <f a>4 <g bes>4 <e g>4 | \barNumberCheck #110
-  <bes' d>2 <a c>4 r4 \mBreak | % 111
-  <d, f>4 <e g>4 <f a>4 <g bes>4 | % 112
-  <f a>2 <e g>4 r4 | % 113
-  bes'2 a8 [ g8 f8 e8 ] | % 114
-  c'2 bes8 [ a8 g8 f8 ] | % 115
-  d'2 <a c>8 [ <g bes>8 <f a>8 <e g>8 ] \mPageBreak | % 116
-  <g bes>2 <f a>4 r4 | % 117
-  <fis a>4 <fis a>4 <fis a>4 <fis a>4 | % 118
-  <g bes>4 <bes d>4 <a c>4 <g bes>4 | % 119
-  <f a>2 <c e g>2 | \barNumberCheck #120
-  <c f>2. <f a>4 | % 121
-  <f a>2 <d f>4 <f d'>4 \mBreak | % 122
-  <a c>2 <g bes>4 <g bes>4 ~ ~ | % 123
-  <g bes>4 <g bes>4 <f a>4 <e g>4 | % 124
-  <e g>2 f4 r4 | % 125
-  <e a>4 <e a>4 <e a>4 <e a>4 | % 126
-  <f bes>2 <e a>4 r4 | % 127
-  <e a cis>4 <e a cis>4 <e a cis>4 <e a cis>4 \mBreak | % 128
-  <f bes d>2 <e a cis>4 r4 | % 129
-  <f a>2 <d f>4 <f d'>4 | \barNumberCheck #130
-  <a c>2 <g bes>4 <g bes>4 | % 131
-  <c e>4 <bes d>4 <a c>4 <g bes>4 | % 132
-  <g bes>2 <f a>4 r4 | % 133
-  <f a>2 <e a>2 \mPageBreak | % 134
-  <gis b>4 <b d>4 <a c>4 <gis b>4 | % 135
-  <a c>2 <d, gis b>2 | % 136
-  <c e a>2. r4 | % 137
-  <d fis d'>1 | % 138
-  <d g bes>1 | % 139
-  <f a c>1 \mBreak | \barNumberCheck #140
-  <d f bes d>2. r4 | % 141
-  <e g>4 <f a>4 <g bes>4 <e c'>4 | % 142
-  <e g bes>2 <f a>4 r4 | % 143
-  <fis a>4 <g b>4 <a c>4 <fis d'>4 | % 144
-  <a c>2 <g b>4 <fis a>4 | % 145
-  <g b>2. r4 \bar "||"
-  \mBreak | % 146
-  \key c \major | % 146
-  <e g c>2 _\f <e g c>2 | % 147
-  <g c>4 <g b>4 <e a>4 <e g>4 | % 148
-  <e a c>2 <f b d>2 | % 149
-  <e c'>2. r4 | \barNumberCheck #150
-  <g c>4 <g b>4 <e a>4 <d g>4 | % 151
-  <e a c>2. <e a c>4 \mPageBreak | % 152
-  <fis a>2. <fis a>4 | % 153
-  <fis b d>2. <fis b d>4 | % 154
-  <e g>2 <e a c>2 | % 155
-  <g b>2 <d fis a>2 ~ | % 156
-  <d g>2. <e g>4 | % 157
-  <f a>4 <g b>4 <a c>4 <b d>4 \mBreak | % 158
-  <e, c' e>2. <e g>4 | % 159
-  <f a>4 <g b>4 <a c>4 <b d>4 | \barNumberCheck #160
-  <e, c' e>2. <e g>4 | % 161
-  <f a>4 <g b>4 <a c>4 <b d>4 | % 162
-  <c e>2 <f, a d>2 | % 163
-  <e g c>2 <d f g b>2 \mBreak | % 164
-  <e c' e>2. <e g>4 | % 165
-  <f a>4 <g b>4 <a c>4 <b d>4 | % 166
-  <e, c' e>2. <e g>4 | % 167
-  <f a>4 <g b>4 <a c>4 <b d>4 | % 168
-  <e, c' e>2. <e g>4 \mPageBreak | % 169
-  <f a>4 <g b>4 <a c>4 <b d>4 | \barNumberCheck #170
-  <c e>2 <f, a d>2 | % 171
-  <e g c>2 <d f g b>2 | % 172
-  <e c' e>2. r4 | % 173
-  <c e c'>1 | % 174
-  <d f a>2. r4 | % 175
-  <d f g b>1 | % 176
-  <c e g c>1 \bar "|."
-  \mBreak | % 177%}
+ 
 }
 
 orgelRHUGloriaGounodDVE = \relative c' {
-  %{\time 4/4  <c g' c>2. r4 <c' e>2 <c e>2 <c e>4 <g d'>4 <a c>4 <e b'>4
-  <a c>2 <g d'>2 <c, g' c>4 c4 e4 g4 <c e>2 <c e>2 <c e>4 <g d'>4 <a
-  c>4 b4 \mBreak <a c>2 ~ ~ <d, a' c>2 <g b>4 g4 ^\> g4 g4 -\! b2 c4
-  d4 c1 b2 c4 d4 c1 c2 <c, g'>2 \mPageBreak f2 g4 a4 g2 ~ <g, g'>2 <c
-  g'>2. g'4 <c e>2 <g d'>2 <c, g' c>4 g'4 e4 c4 g'2. g4 c4 c,4 e4
-  g4 \mBreak c2 <e, b'>2 a4 c4 b4 a4 b2 c2 b4 b4 c4 d4 c2 e,2 f4 a4 c4
-  g4 c,2 d4 e4 \mBreak f8 [ g8 a8 b8 ] c2 c1 ~ c2. f,4 g2 ~ <g, g'>2 <c
-  c'>4 <c c'>4 <c c'>4 <c c'>4 <c c'>1 ~ ~ \mPageBreak <c c'>4 <c
-  c'>4 <c c'>4 <c c'>4 <c c'>1 ~ ~ <c c'>4 <c c'>4 <c c'>4 <c c'>4
-  c2 c2 <f, f'>1 ~ ~ <f f'>1 <c c'>1 ~ ^\fermata ~ <c c'>4 r4 r2 \bar
-  "||"
-  \mBreak | % 105
-  \key f \major f'4 a4 c4 cis4 d4 e4 f8 [ c8 a8 f8 ] a4 c4 bes4 g4 c2.
-  e4 \rest c1 d4 e4 f4 e4 \rest \mBreak bes2 c4 d4 c4 b4 c4 c,4 ~ bes'1
-  a2 c4 a4 bes4 g4 c2 ~ \mPageBreak c2. g'4 \rest d4 d4 d4 d4 d4 e4 f4
-  d4 c2 <c, bes'>2 <f a>2. r4 d4 f4 a4 <d, d'>4 ~ \mBreak d'2. e8 [ d8
-  ] <a cis>1 ~ ~ <d, a' cis>2 ~ ~ <d a' d>4 r4 <a' cis>4 <a cis>4 <a
-  cis>4 <a cis>4 d2 cis4 d,4 \rest a'4 a4 a4 a4 \mBreak g4 f8 [ g8
-  ] a4 r4 d,4 f4 a4 <d, d'>4 d'2. d,4 \rest c'1 ~ c2. f4 \rest d2 c2
-  \mPageBreak b4 gis4 a4 d,4 e1 <a, a'>2. a'4 <d, a'>1 <g bes>1 <f c'>1
-  \mBreak <bes, f' bes>2. r4 c'2 d4 c4 c2. d,4 \rest d'1 es2 d4 c4 d2.
-  d,4 \rest \bar "||"
-  \mBreak | % 146
-  \key c \major <c g' c>2 <c g' c>2 <c' e>4 <g d'>4 <a c>4 <e b'>4 <a
-  c>2 <g d'>2 ~ <c, g' c>4 c4 e4 g4 <c e>4 <g d'>4 <a c>4 b4 a2. a4
-  \mPageBreak <d, d'>2. <d d'>4 <b b'>2. <b b'>4 <e b'>2 <c c'>2 d'2 c2
-  <g b>2. r4 R1 \mBreak <c, g' c>2. r4 R1 <c g' c>2. <e g>4 <f a>4 <g
-  b>4 <a c>4 <b d>4 <c e>2 f,2 g2 ~ <g, g'>2 \mBreak <c g' c>2. r4
-  R1 <c g' c>2. r4 R1 <c g' c>2. <e g>4 \mPageBreak <f a>4 <g b>4 <a c>4
-  <b d>4 <c e>2 f,2 g2 ~ <g, g'>2 <c g' c>2. r4 <a a'>1 ~ <d a'>2. r4
-  <g, g'>1 <c, c'>1 \bar "|."
-  \mBreak | % 177%}
+  
 }
 
 orgelRHNotenGloriaGounodDVE = \tempTranspose \relative c' {

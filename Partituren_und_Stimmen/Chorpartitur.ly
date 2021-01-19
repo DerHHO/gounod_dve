@@ -103,7 +103,8 @@ tempTranspose = #(define-music-function (parser location music)
 
 \score {
   \header {
-    piece = \markup { %{<piecetitlesize>%}\larger \larger \larger %{</piecetitlesize>%} { Benedictus } }
+    piece = \benedictushinweis
+    %\markup { %{<piecetitlesize>%}\larger \larger \larger %{</piecetitlesize>%} { Benedictus } }
   }
   \removeWithTag #'transponierendepartitur
   \removeWithTag #'partitur

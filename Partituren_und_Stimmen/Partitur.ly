@@ -91,7 +91,7 @@ print-all-headers = ##f
       }
     }
   }
-  
+
   \score {
     \header {
       piece = \markup { \larger \larger \larger { Sanctus } }
@@ -109,15 +109,17 @@ print-all-headers = ##f
       }
     }
   }
-  
+
   \score {
     \header {
-      piece = \markup { \larger \larger \larger { Benedictus } }
+      piece = \benedictushinweis
+
     }
     \removeWithTag #'transponierendepartitur
     \removeWithTag #'klavierauszug
     \removeWithTag #'direction
     \removeWithTag #'einzelstimme
+
     \scoreBenedictusGounodDVE
 
     \layout {
@@ -127,6 +129,9 @@ print-all-headers = ##f
       }
     }
   }
+
+
+
   \score {
     \header {
       piece = \markup { \larger \larger \larger { O salutaris hostia } }

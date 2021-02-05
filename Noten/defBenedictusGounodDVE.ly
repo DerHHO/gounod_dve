@@ -10,6 +10,7 @@ chorpartiturBenedictusGounodDVE = {
 
       }
       <<
+        \new Voice { \ablaufzeileBenedictusGounodDVE }
         \new Voice = "vsop" {
           \tag #'transponierendepartitur {
             \clef "treble"

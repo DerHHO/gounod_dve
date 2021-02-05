@@ -67,7 +67,7 @@ gemeinsamerTextIIGloriaGounodDVE = \lyricmode {
   cum San -- cto Spi -- ri -- tu in glo -- ri -- a De -- i,
   in glo -- ri -- a De -- i Pa -- tris,
   tu so -- lus Al -- tis -- si -- mus,
-  cum Sanc -- to Spi -- ri -- tu in glo -- ri -- a De -- i
+  cum San -- cto Spi -- ri -- tu in glo -- ri -- a De -- i
   Pa -- tris.
   A -- men, a -- men.
 }
@@ -251,7 +251,7 @@ altNotenGloriaGounodDVE = \tempTranspose \relative c' {
   c4 b4 a4 g4 \mBreak | \barNumberCheck #(- 70 taktkorrektur-gloria-gounoddve)
   a2 ( fis2 ) | % 71
   g2. r4 | % 72
-  g2 ^\p f2 | % 73
+  g2 ^\p f!2 | % 73
   e2 e4 r4 | % 74
   g2 f2 | % 75
   e4. e8 e4 r4 | % 76
@@ -651,7 +651,7 @@ orgelLHOGloriaGounodDVE = \relative c {
 orgelLHUGloriaDVE = \relative c {
   \time 4/4  s1*7
   \mBreak s2*5
-  f2
+  f!2
   e1 |
   s2 f2 |
   e1 |
@@ -692,7 +692,7 @@ orgelLHUGloriaDVE = \relative c {
   <a d,>2. r4 |
   a4 a a a |
   g4 f8 g a4 r |
-  R1 \mBreak
+  s1 \mBreak
   s1*2 |
   g4 fis g r |
   c4 c, d e |

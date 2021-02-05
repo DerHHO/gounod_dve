@@ -49,9 +49,9 @@ sopranTextSanctusGounodDVE = \lyricmode {
   De -- us Sa -- ba -- oth,
   San -- ctus, San -- ctus, San -- ctus
   Do -- mi -- nus De -- us Sa -- ba -- oth.
-  Ple -- ni sunt cœ -- li -- et ter -- ra
+  Ple -- ni sunt cœ -- li et ter -- ra
   glo -- ri -- a tu -- a,
-  ple -- ni sunt cœ -- li -- et ter -- ra 
+  ple -- ni sunt cœ -- li et ter -- ra 
   glo -- ri -- a tu -- a.
   \hosannaTextSanctusGounodDVE
 }
@@ -62,7 +62,7 @@ altTextSanctusGounodDVE = \lyricmode {
   De -- us Sa -- ba -- oth,
   San -- ctus, San -- ctus, San -- ctus
   Do -- mi -- nus De -- us Sa -- ba -- oth.
-  Ple -- ni sunt cœ -- li -- et ter -- ra
+  Ple -- ni sunt cœ -- li et ter -- ra
   glo -- ri -- a tu -- a.
   \hosannaTextSanctusGounodDVE
 }
@@ -340,7 +340,7 @@ metronomZeileSanctusGounodDVE = \drummode {
 \include "defSanctusGounodDVE.ly"
 
 %***Arbeitspartitur
-#(set-global-staff-size 14)
+#(set-global-staff-size 16)
 \book {
   \bookOutputName "SanctusGounodDVE-Arbeitspartitur"
   \score {

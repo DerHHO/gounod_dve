@@ -1,4 +1,4 @@
-\version "2.18.2"
+\version "2.22.0"
 #(ly:set-option 'relative-includes #t)
 
 #(set! paper-alist (cons '("Marschbuch" . (cons (* 148.5 mm) (* 120 mm)) ) paper-alist))
@@ -23,7 +23,7 @@
 \include "../Noten/mydrums2.ly"
 \include "../Noten/drumdefinitions.ly"
 
-tempTranspose = #(define-music-function (parser location music)
+tempTranspose = #(define-music-function (music)
                    (ly:music?)
                    (let* ((octave (or (ly:get-option 'octave) -1))
                           (note (or (ly:get-option 'note) 0))
@@ -66,7 +66,7 @@ tempTranspose = #(define-music-function (parser location music)
   \removeWithTag #'klavierauszug
   \removeWithTag #'midiausgabe
   \optionalTranspose { 
-    \compressFullBarRests
+    \compressEmptyMeasures
     \transpose c c \chorpartiturKyrieGounodDVE 
   }
 }
@@ -81,7 +81,7 @@ tempTranspose = #(define-music-function (parser location music)
   \removeWithTag #'klavierauszug
   \removeWithTag #'midiausgabe
   \optionalTranspose { 
-    \compressFullBarRests
+    \compressEmptyMeasures
     \transpose c c \chorpartiturGloriaGounodDVE 
   }
 }
@@ -96,7 +96,7 @@ tempTranspose = #(define-music-function (parser location music)
   \removeWithTag #'klavierauszug
   \removeWithTag #'midiausgabe
   \optionalTranspose { 
-    \compressFullBarRests
+    \compressEmptyMeasures
     \transpose c c \chorpartiturSanctusGounodDVE 
   }
 }
@@ -112,7 +112,7 @@ tempTranspose = #(define-music-function (parser location music)
   \removeWithTag #'klavierauszug
   \removeWithTag #'midiausgabe
   \optionalTranspose { 
-    \compressFullBarRests
+    \compressEmptyMeasures
     \transpose c c \chorpartiturBenedictusGounodDVE 
   }
 }
@@ -127,7 +127,7 @@ tempTranspose = #(define-music-function (parser location music)
   \removeWithTag #'klavierauszug
   \removeWithTag #'midiausgabe
   \optionalTranspose { 
-    \compressFullBarRests
+    \compressEmptyMeasures
     \transpose c c \chorpartiturOSalutarisGounodDVE 
   }
 }
@@ -142,7 +142,7 @@ tempTranspose = #(define-music-function (parser location music)
   \removeWithTag #'klavierauszug
   \removeWithTag #'midiausgabe
   \optionalTranspose { 
-    \compressFullBarRests
+    \compressEmptyMeasures
     \transpose c c \chorpartiturAgnusGounodDVE 
   }
 }

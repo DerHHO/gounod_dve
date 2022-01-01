@@ -1,3 +1,5 @@
+\version "2.18.2"
+
 optionalTranspose = #(define-music-function (parser location music)
                        (ly:music?)
                        (let* ((octave (or (ly:get-option 'octave) -1))

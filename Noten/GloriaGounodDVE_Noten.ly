@@ -492,7 +492,7 @@ orgelRHOGloriaGounodDVE = \relative g' {
   <f a>4 <g b>4 <a c>4 <b d>4 | \barNumberCheck #(- 170 taktkorrektur-gloria-gounoddve)
   <c e>2 <f, a d>2 | % 171
   <e g c>2 <d f g b>2 | % 172
-  <e c' e>2. r4 | % 173
+  <e g c>2. r4 | % 173
   <c e c'>1 | % 174
   <d f a>2. r4 | % 175
   <d f g b>1 | % 176
@@ -739,7 +739,7 @@ metronomZeileGloriaGounodDVE = \drummode {
 }
 \include "defGloriaGounodDVE.ly"
 
-%***Arbeitspartitur
+%{Arbeitspartitur
 #(set-global-staff-size 17)
 \book {
   \bookOutputName "GloriaGounodDVE-Arbeitspartitur"
@@ -777,4 +777,4 @@ metronomZeileGloriaGounodDVE = \drummode {
     \scoreGloriaGounodDVE
   }
 }
-%Arbeitspartitur***
+Arbeitspartitur%}
